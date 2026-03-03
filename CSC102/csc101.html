@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSC102: PHP Programming</title>
+    <style>
+      /* clean style – matching the original CSC101 template, now with CSC102 content */
+      :root {
+        --primary-color: #0d6efd;
+        --secondary-color: #6c757d;
+        --background-color: #f8f9fa;
+        --text-color: #212529;
+        --border-color: #dee2e6;
+        --card-background: #ffffff;
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2em;
+      }
+
+      .breadcrumb {
+        margin-bottom: 2em;
+      }
+
+      .breadcrumb a {
+        font-weight: 500;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-size: 1.1em;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 2em;
+        padding-bottom: 1.5em;
+      }
+
+      header h1 {
+        font-size: 2.8em;
+        margin-bottom: 0.25em;
+      }
+
+      header p {
+        font-size: 1.1em;
+        color: var(--secondary-color);
+        max-width: 600px;
+        margin: 0.5em auto;
+      }
+
+      #table-of-contents {
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5em 2em;
+        margin-bottom: 3em;
+      }
+
+      #table-of-contents h2 {
+        font-size: 1.6em;
+        margin-top: 0;
+        margin-bottom: 1em;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5em;
+      }
+
+      .toc-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+      }
+
+      .toc-list li {
+        margin-bottom: 0.75em;
+      }
+
+      .toc-list a {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: 500;
+      }
+      .toc-list a:hover {
+        text-decoration: underline;
+      }
+
+      .module {
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5em 2em;
+        margin-bottom: 2em;
+        scroll-margin-top: 2em;
+      }
+
+      .module h2 {
+        font-size: 1.8em;
+        margin-top: 0;
+        color: var(--text-color);
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5em;
+        margin-bottom: 1em;
+      }
+
+      .module ul {
+        padding-left: 20px;
+        margin: 0.5em 0;
+      }
+
+      .module li {
+        margin-bottom: 0.5em;
+      }
+
+      .module li strong {
+        color: var(--primary-color);
+      }
+
+      .module ul ul {
+        margin-top: 0.3em;
+        margin-bottom: 0.2em;
+      }
+
+      .module ul ul li {
+        list-style-type: circle;
+      }
+
+      code {
+        background-color: #e9ecef;
+        padding: 0.2em 0.4em;
+        border-radius: 4px;
+        font-size: 0.95em;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 1.2em;
+        }
+        header h1 {
+          font-size: 2.2em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="csclanding.html">&larr; Back to CSC Hub</a>
+      </nav>
+
+      <header>
+        <h1>CSC102: PHP Programming</h1>
+        <p>basics · control flow · arrays · web interaction · MySQL · GD</p>
+      </header>
+
+      <section id="table-of-contents">
+        <h2>Table of Contents</h2>
+        <ul class="toc-list">
+          <li><a href="#module1">Module 1: PHP Basics and Environment</a></li>
+          <li>
+            <a href="#module2">Module 2: Variables, Constants, and Operators</a>
+          </li>
+          <li><a href="#module3">Module 3: Control Flow</a></li>
+          <li>
+            <a href="#module4">Module 4: Arrays and Built‑in Functions</a>
+          </li>
+          <li>
+            <a href="#module5">Module 5: Web Interaction and Data Handling</a>
+          </li>
+          <li>
+            <a href="#module6">Module 6: Advanced Topics and Code Analysis</a>
+          </li>
+        </ul>
+      </section>
+
+      <main>
+        <!-- Module 1 -->
+        <section id="module1" class="module">
+          <h2>Module 1: PHP Basics and Environment</h2>
+          <ul>
+            <li>
+              <strong>Overview:</strong> server‑side scripting, embedded in
+              HTML, open‑source.
+            </li>
+            <li>
+              <strong>Setup:</strong> requires web server + PHP; WampServer =
+              Windows + Apache + MySQL + PHP.
+            </li>
+            <li>
+              <strong>Syntax & Structure:</strong>
+              <ul>
+                <li>Canonical tags: <code>&lt;?php ?&gt;</code></li>
+                <li>Statements end with <code>;</code>, whitespace ignored.</li>
+                <li>
+                  Comments: <code>//</code> single‑line,
+                  <code>/* … */</code> multi‑line.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Output:</strong> <code>echo</code> (multiple arguments)
+              vs. <code>print</code> (returns 1).
+            </li>
+          </ul>
+        </section>
+
+        <!-- Module 2 -->
+        <section id="module2" class="module">
+          <h2>Module 2: Variables, Constants, and Operators</h2>
+          <ul>
+            <li>
+              <strong>Variables:</strong> start with <code>$</code>,
+              case‑sensitive, automatic typing.
+            </li>
+            <li>
+              <strong>Scope:</strong> local, global (<code>global</code>
+              keyword, <code>$GLOBALS</code> array), static.
+            </li>
+            <li>
+              <strong>Constants:</strong> <code>define('NAME', value)</code>,
+              conventionally uppercase, global scope.
+            </li>
+            <li>
+              <strong>Operators:</strong>
+              <ul>
+                <li>Assignment: <code>=</code></li>
+                <li>Arithmetic: <code>+ - * / %</code></li>
+                <li>
+                  String: concatenation <code>.</code> and <code>.=</code>
+                </li>
+                <li>
+                  Comparison: <code>==</code>, <code>===</code>,
+                  <code>!=</code>, <code>&lt;&gt;</code>
+                </li>
+                <li>Logical: <code>&&</code> (AND), <code>||</code> (OR)</li>
+                <li>Precedence follows standard rules (PEMDAS).</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Module 3 -->
+        <section id="module3" class="module">
+          <h2>Module 3: Control Flow</h2>
+          <ul>
+            <li>
+              <strong>Branching:</strong>
+              <ul>
+                <li><code>if</code>, <code>else</code>, <code>elseif</code></li>
+                <li><code>switch</code> (efficient for many values)</li>
+                <li>Ternary: <code>condition ? expr1 : expr2</code></li>
+              </ul>
+            </li>
+            <li>
+              <strong>Looping:</strong>
+              <ul>
+                <li>
+                  <code>while</code>, <code>do‑while</code> (executes at least
+                  once)
+                </li>
+                <li><code>for</code> (known iteration count)</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Jumps:</strong> <code>break</code> (exit loop/switch),
+              <code>continue</code> (skip iteration).
+            </li>
+          </ul>
+        </section>
+
+        <!-- Module 4 -->
+        <section id="module4" class="module">
+          <h2>Module 4: Arrays and Built‑in Functions</h2>
+          <ul>
+            <li>
+              <strong>Array Types:</strong> indexed, associative,
+              multidimensional.
+            </li>
+            <li>
+              <strong>Iteration:</strong>
+              <code>foreach ($array as $key => $value)</code>
+            </li>
+            <li>
+              <strong>Array functions:</strong> <code>count()</code>,
+              <code>array_sum()</code>, <code>array_push()</code>,
+              <code>sort()</code>
+            </li>
+            <li>
+              <strong>String functions:</strong> <code>strlen()</code>,
+              <code>strtoupper()</code>, <code>substr()</code>,
+              <code>strpos()</code>, <code>trim()</code>,
+              <code>explode()</code>, <code>implode()</code>
+            </li>
+            <li>
+              <strong>Math/Utility:</strong> <code>rand()</code>,
+              <code>round()</code>, <code>pow()</code>,
+              <code>is_numeric()</code>, type casting <code>(int)</code>.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Module 5 -->
+        <section id="module5" class="module">
+          <h2>Module 5: Web Interaction and Data Handling</h2>
+          <ul>
+            <li>
+              <strong>Superglobals & Forms:</strong> <code>$_GET</code>,
+              <code>$_POST</code>, <code>$_REQUEST</code> collect form data.
+            </li>
+            <li>
+              <strong>File Inclusion:</strong> <code>include</code>,
+              <code>include_once</code>, <code>require</code>,
+              <code>require_once</code>.
+            </li>
+            <li>
+              <strong>State Management:</strong> Cookies (client‑side) vs.
+              Sessions (server‑side, <code>session_destroy()</code>).
+            </li>
+            <li>
+              <strong>File System:</strong> <code>fopen()</code>,
+              <code>fclose()</code>, <code>fread()</code>,
+              <code>fwrite()</code>, <code>unlink()</code>,
+              <code>file_exists()</code>, <code>filesize()</code>.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Module 6 -->
+        <section id="module6" class="module">
+          <h2>Module 6: Advanced Topics and Code Analysis</h2>
+          <ul>
+            <li>
+              <strong>Database (MySQL):</strong> <code>mysql_connect()</code>,
+              <code>mysql_query()</code> (legacy), SQL injection prevention with
+              prepared statements.
+            </li>
+            <li>
+              <strong>Image Manipulation (GD):</strong> create images, draw
+              (<code>imageline()</code>, <code>imagerectangle()</code>),
+              filters, thumbnails.
+            </li>
+            <li>
+              <strong>Code Output / Debugging:</strong>
+              <ul>
+                <li>
+                  Type coercion: <code>echo 2 + "2"</code> → <code>4</code>
+                </li>
+                <li>References: <code>$b = &$a</code></li>
+                <li>
+                  Pre/post increment: <code>++$x</code> vs <code>$x++</code>
+                </li>
+                <li>Strict comparison: <code>===</code> (value + type)</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
