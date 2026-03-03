@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MTH102: Calculus & Algebra</title>
+    <style>
+      /* clean style – matching the original MTH101 template, now with MTH102 content */
+      :root {
+        --primary-color: #0d6efd;
+        --secondary-color: #6c757d;
+        --background-color: #f8f9fa;
+        --text-color: #212529;
+        --border-color: #dee2e6;
+        --card-background: #ffffff;
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2em;
+      }
+
+      .breadcrumb {
+        margin-bottom: 2em;
+      }
+
+      .breadcrumb a {
+        font-weight: 500;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-size: 1.1em;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 2em;
+        padding-bottom: 1.5em;
+      }
+
+      header h1 {
+        font-size: 2.8em;
+        margin-bottom: 0.25em;
+      }
+
+      header p {
+        font-size: 1.1em;
+        color: var(--secondary-color);
+        max-width: 600px;
+        margin: 0.5em auto;
+      }
+
+      #table-of-contents {
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5em 2em;
+        margin-bottom: 3em;
+      }
+
+      #table-of-contents h2 {
+        font-size: 1.6em;
+        margin-top: 0;
+        margin-bottom: 1em;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5em;
+      }
+
+      .toc-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+      }
+
+      .toc-list li {
+        margin-bottom: 0.75em;
+      }
+
+      .toc-list a {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: 500;
+      }
+      .toc-list a:hover {
+        text-decoration: underline;
+      }
+
+      .module {
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5em 2em;
+        margin-bottom: 2em;
+        scroll-margin-top: 2em;
+      }
+
+      .module h2 {
+        font-size: 1.8em;
+        margin-top: 0;
+        color: var(--text-color);
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5em;
+        margin-bottom: 1em;
+      }
+
+      .study-time {
+        margin: 0 0 1em 0;
+        color: var(--secondary-color);
+        font-size: 0.95em;
+      }
+
+      .module ul {
+        padding-left: 20px;
+        margin: 0.5em 0;
+      }
+
+      .module li {
+        margin-bottom: 0.5em;
+      }
+
+      .module li strong {
+        color: var(--primary-color);
+      }
+
+      .module ul ul {
+        margin-top: 0.3em;
+        margin-bottom: 0.2em;
+      }
+
+      .module ul ul li {
+        list-style-type: circle;
+      }
+
+      /* for LaTeX-style math formatting */
+      .math {
+        font-style: italic;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 1.2em;
+        }
+        header h1 {
+          font-size: 2.2em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/index.html">&larr; Back to Home</a>
+      </nav>
+
+      <header>
+        <h1>MTH102: Calculus & Algebra</h1>
+        <p>mathematical foundations · core calculus · advanced topics</p>
+      </header>
+
+      <section id="table-of-contents">
+        <h2>Table of Contents</h2>
+        <ul class="toc-list">
+          <li><a href="#module1">Module 1: Mathematical Foundations</a></li>
+          <li>
+            <a href="#module2">Module 2: Core Calculus and Applications</a>
+          </li>
+          <li>
+            <a href="#module3">Module 3: Advanced Topics and Specialization</a>
+          </li>
+        </ul>
+      </section>
+
+      <main>
+        <!-- MODULE 1 – Mathematical Foundations -->
+        <section id="module1" class="module">
+          <h2>Module 1: Mathematical Foundations</h2>
+          <p class="study-time">
+            <strong>Estimated Study Time:</strong> 8–10 hours
+          </p>
+          <ul>
+            <li>
+              <strong>1.1 Numbers and Arithmetic:</strong> Natural, integers,
+              rational, irrational, real; fractions, ratios, percentages;
+              powers, roots, standard form; number systems (denary, binary,
+              octal, hexadecimal).
+            </li>
+            <li>
+              <strong>1.2 Set Theory:</strong> Definitions (subset, universal,
+              null, unit); operations (union, intersection, complement,
+              symmetric difference); Venn diagrams.
+            </li>
+            <li>
+              <strong>1.3 Algebra and Equations:</strong> Algebraic expressions,
+              terms, coefficients; indices and logarithms; factorization,
+              partial fractions; linear & polynomial equations; quadratic
+              equations (roots, discriminant).
+            </li>
+            <li>
+              <strong>1.4 Functions, Graphs, and Inequalities:</strong> Domain,
+              range, independent/dependent variables; inverse functions,
+              composition; graphs of linear and second-degree curves;
+              inequalities and absolute values.
+            </li>
+          </ul>
+        </section>
+
+        <!-- MODULE 2 – Core Calculus and Applications -->
+        <section id="module2" class="module">
+          <h2>Module 2: Core Calculus and Applications</h2>
+          <p class="study-time">
+            <strong>Estimated Study Time:</strong> 12–15 hours
+          </p>
+          <ul>
+            <li>
+              <strong>2.1 Limits and Continuity:</strong> Definition
+              <span class="math">lim<sub>x→c</sub> f(x) = L</span>; evaluating
+              limits (algebraic, trigonometric, at infinity); theorems on
+              limits.
+            </li>
+            <li>
+              <strong>2.2 Differentiation:</strong> Geometric interpretation
+              (<span class="math">dy/dx</span> as gradient); standard
+              derivatives (polynomials, trigonometric, log, exponential);
+              product, quotient, chain rule; implicit and parametric
+              differentiation.
+            </li>
+            <li>
+              <strong>2.3 Applications of Differentiation:</strong> Tangents and
+              normals; stationary points (maxima, minima, inflection); second
+              and higher derivatives.
+            </li>
+            <li>
+              <strong>2.4 Integration:</strong> Area under a curve; indefinite
+              integrals & constant of integration (<span class="math">C</span>);
+              standard integrals, polynomials; integration of functions of a
+              linear function (e.g., <span class="math">∫ cos(ax+b) dx</span>).
+            </li>
+          </ul>
+        </section>
+
+        <!-- MODULE 3 – Advanced Topics and Specialization -->
+        <section id="module3" class="module">
+          <h2>Module 3: Advanced Topics and Specialization</h2>
+          <p class="study-time">
+            <strong>Estimated Study Time:</strong> 14–18 hours
+          </p>
+          <ul>
+            <li>
+              <strong>3.1 Sequences and Series:</strong> Arithmetic (A.P.) and
+              geometric (G.P.) progressions; sum to infinity; power series,
+              Maclaurin’s and Taylor’s series.
+            </li>
+            <li>
+              <strong>3.2 Vectors, Matrices, and Determinants:</strong> Matrix
+              definitions, operations, transpose, inverse; determinants (2nd &
+              3rd order); scalar/vector quantities, dot and cross products.
+            </li>
+            <li>
+              <strong>3.3 Complex Numbers:</strong> Symbol
+              <span class="math">j</span>, powers of
+              <span class="math">j</span>; algebra (addition, subtraction,
+              multiplication, division); Argand diagram, polar form.
+            </li>
+            <li>
+              <strong>3.4 Differential Equations:</strong> First‑order (direct
+              integration, separating variables, linear); second‑order
+              (homogeneous & inhomogeneous); introduction to Laplace transforms.
+            </li>
+            <li>
+              <strong>3.5 Statistics and Probability:</strong> Grouped data,
+              histograms; central tendency (mean, mode, median) and dispersion
+              (standard deviation); basic probability, binomial, Poisson, normal
+              distributions.
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
