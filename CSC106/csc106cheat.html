@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSC106: Hardware Maintenance Cheat Sheet</title>
+    <style>
+      /* clean style – matches all other cheat sheets */
+      :root {
+        --primary-color: #0d6efd;
+        --secondary-color: #6c757d;
+        --background-color: #f8f9fa;
+        --text-color: #212529;
+        --border-color: #dee2e6;
+        --card-background: #ffffff;
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2em;
+      }
+
+      .breadcrumb {
+        margin-bottom: 2em;
+      }
+
+      .breadcrumb a {
+        font-weight: 500;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-size: 1.1em;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 2em;
+        padding-bottom: 1.5em;
+      }
+
+      header h1 {
+        font-size: 2.8em;
+        margin-bottom: 0.25em;
+      }
+
+      header p {
+        font-size: 1.1em;
+        color: var(--secondary-color);
+        max-width: 600px;
+        margin: 0.5em auto;
+      }
+
+      .module {
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5em 2em;
+        margin-bottom: 2em;
+      }
+
+      .module h2 {
+        font-size: 1.8em;
+        margin-top: 0;
+        color: var(--text-color);
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5em;
+        margin-bottom: 1em;
+      }
+
+      .definition-list {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .definition-list li {
+        margin-bottom: 1.25em;
+        padding-left: 1.5em;
+        position: relative;
+      }
+
+      .definition-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--primary-color);
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      .term {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 0.25em;
+      }
+
+      code {
+        font-family: "Courier New", Courier, monospace;
+        background-color: #e9ecef;
+        padding: 0.2em 0.4em;
+        border-radius: 4px;
+        font-size: 0.95em;
+      }
+
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1em;
+      }
+      .comparison-table th,
+      .comparison-table td {
+        border: 1px solid var(--border-color);
+        padding: 0.75em;
+        text-align: left;
+      }
+      .comparison-table th {
+        background-color: #f8f9fa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="csc106landing.html">&larr; Back to CSC106 Hub</a>
+      </nav>
+
+      <header>
+        <h1>CSC106: Hardware Maintenance Cheat Sheet</h1>
+        <p>components · assembly · Windows · motherboards · troubleshooting</p>
+      </header>
+
+      <main>
+        <!-- 1. Parts and tools -->
+        <section class="module">
+          <h2>1. Parts & Tools</h2>
+          <ul class="definition-list">
+            <li>
+              <span class="term">Key components</span>
+              CPU, RAM, motherboard, PSU, storage (HDD/SSD), GPU, cooling fans.
+            </li>
+            <li>
+              <span class="term">Essential tools</span>
+              Phillips screwdriver (#0, #1), anti‑static wrist strap, thermal
+              paste, multimeter, cable ties, flashlight.
+            </li>
+            <li>
+              <span class="term">Safety</span>
+              Power off, unplug, ground yourself, avoid magnetic tools near
+              drives.
+            </li>
+          </ul>
+        </section>
+
+        <!-- 2. Assembly -->
+        <section class="module">
+          <h2>2. Desktop Assembly</h2>
+          <ul class="definition-list">
+            <li>
+              <span class="term">Installation order</span>
+              PSU → motherboard (with CPU, RAM, cooler) → drives → expansion
+              cards → connect front panel & power cables.
+            </li>
+            <li>
+              <span class="term">First boot</span>
+              Listen for beep, enter BIOS (DEL/F2), check CPU temp, RAM
+              detection.
+            </li>
+          </ul>
+        </section>
+
+        <!-- 3. Windows OS -->
+        <section class="module">
+          <h2>3. Windows OS basics</h2>
+          <ul class="definition-list">
+            <li>
+              <span class="term">Editions</span>
+              Home (basic), Pro (bitlocker, remote desktop), Enterprise (orgs).
+            </li>
+            <li>
+              <span class="term">Key tools</span>
+              Task Manager (Ctrl+Shift+Esc), Device Manager, Disk Management,
+              Event Viewer.
+            </li>
+            <li>
+              <span class="term">File systems</span>
+              NTFS (security, large files), FAT32 (compatibility, max 4GB file),
+              exFAT (flash drives).
+            </li>
+          </ul>
+        </section>
+
+        <!-- 4. Motherboards -->
+        <section class="module">
+          <h2>4. Motherboards</h2>
+          <ul class="definition-list">
+            <li>
+              <span class="term">Form factors</span>
+              ATX (standard), microATX (smaller), Mini‑ITX (compact).
+            </li>
+            <li>
+              <span class="term">Chipset</span>
+              Intel: Z, B, H series; AMD: X, B, A series – determines features
+              (overclocking, PCIe lanes).
+            </li>
+            <li>
+              <span class="term">BIOS/UEFI</span>
+              Firmware interface; UEFI supports mouse, secure boot, GPT disks.
+            </li>
+          </ul>
+        </section>
+
+        <!-- 5. Processors & memory -->
+        <section class="module">
+          <h2>5. CPU & RAM</h2>
+          <ul class="definition-list">
+            <li>
+              <span class="term">CPU sockets</span>
+              Intel LGA (land grid array), AMD PGA (pin grid array) – must match
+              motherboard.
+            </li>
+            <li>
+              <span class="term">Cooling</span>
+              Air cooler (heatsink+fan) or liquid (AIO). Always use thermal
+              paste.
+            </li>
+            <li>
+              <span class="term">RAM</span>
+              DDR3, DDR4, DDR5 – not interchangeable. Dual‑channel: install in
+              matched slots (usually slots 2 and 4).
+            </li>
+          </ul>
+        </section>
+
+        <!-- 6. Hard drives -->
+        <section class="module">
+          <h2>6. Storage drives</h2>
+          <ul class="definition-list">
+            <li>
+              <span class="term">HDD</span>
+              Magnetic platters, high capacity, slower, sensitive to shock.
+            </li>
+            <li>
+              <span class="term">SSD</span>
+              NAND flash, fast, durable, no moving parts. SATA SSD (~550 MB/s)
+              vs NVMe M.2 (up to 7000 MB/s).
+            </li>
+            <li>
+              <span class="term">Partitions</span>
+              MBR (legacy, ≤2TB) and GPT (modern, >2TB, required for UEFI).
+            </li>
+          </ul>
+        </section>
+
+        <!-- 7. Installing Windows -->
+        <section class="module">
+          <h2>7. Windows installation</h2>
+          <ul class="definition-list">
+            <li>
+              <span class="term">Media</span>
+              Create bootable USB with Windows ISO (Rufus or Media Creation
+              Tool).
+            </li>
+            <li>
+              <span class="term">BIOS settings</span>
+              Boot order → USB first; disable secure boot if needed.
+            </li>
+            <li>
+              <span class="term">Steps</span>
+              Language → install now → license → custom (advanced) → partition
+              drive → next.
+            </li>
+            <li>
+              <span class="term">Post‑install</span>
+              Install chipset drivers, GPU drivers, Windows updates.
+            </li>
+          </ul>
+        </section>
+
+        <!-- 8. I/O & storage devices -->
+        <section class="module">
+          <h2>8. I/O & external storage</h2>
+          <ul class="definition-list">
+            <li>
+              <span class="term">Input devices</span>
+              Keyboard, mouse, touchpad, scanner, webcam, microphone.
+            </li>
+            <li>
+              <span class="term">Output devices</span>
+              Monitor, printer, speakers, headphones.
+            </li>
+            <li>
+              <span class="term">External storage</span>
+              USB flash drive, external HDD/SSD, memory card (SD, microSD).
+            </li>
+            <li>
+              <span class="term">Ports</span>
+              USB‑A, USB‑C, HDMI, DisplayPort, Thunderbolt, audio jacks.
+            </li>
+          </ul>
+        </section>
+
+        <!-- 9. Maintaining Windows -->
+        <section class="module">
+          <h2>9. Windows maintenance</h2>
+          <ul class="definition-list">
+            <li>
+              <span class="term">Disk cleanup</span>
+              Remove temp files, recycle bin, old updates (cleanmgr).
+            </li>
+            <li>
+              <span class="term">Defrag/optimize</span>
+              HDD: defrag; SSD: TRIM (automatic, do not defrag SSD).
+            </li>
+            <li>
+              <span class="term">Backup</span>
+              File history, system restore points, full image backup (Windows
+              Backup).
+            </li>
+            <li>
+              <span class="term">Security</span>
+              Keep Windows Update on, run Defender scans, avoid suspicious
+              downloads.
+            </li>
+          </ul>
+        </section>
+
+        <!-- 10. Troubleshooting Windows/apps -->
+        <section class="module">
+          <h2>10. Windows & app troubleshooting</h2>
+          <ul class="definition-list">
+            <li>
+              <span class="term">Common issues</span>
+              Slow boot, blue screen (BSOD), app crashes, driver problems.
+            </li>
+            <li>
+              <span class="term">Tools</span>
+              Event Viewer (check logs), Task Manager (performance), Resource
+              Monitor, Reliability Monitor.
+            </li>
+            <li>
+              <span class="term">Fixes</span>
+              Restart, run sfc /scannow, check updates, boot into safe mode,
+              system restore.
+            </li>
+          </ul>
+        </section>
+
+        <!-- 11. Hardware troubleshooting -->
+        <section class="module">
+          <h2>11. Hardware troubleshooting</h2>
+          <ul class="definition-list">
+            <li>
+              <span class="term">No power</span>
+              Check power cable, PSU switch, test outlet; try known‑good PSU.
+            </li>
+            <li>
+              <span class="term">Beep codes</span>
+              Refer to motherboard manual – e.g., 1 long + 2 short often means
+              video issue.
+            </li>
+            <li>
+              <span class="term">Overheating</span>
+              Clean dust, verify fan operation, re‑apply thermal paste, improve
+              airflow.
+            </li>
+            <li>
+              <span class="term">Component swap</span>
+              Replace with known‑good part to isolate fault (RAM, PSU, GPU).
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

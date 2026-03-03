@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSC106: Computer Hardware Maintenance</title>
+    <style>
+      /* clean style – matches all other module pages */
+      :root {
+        --primary-color: #0d6efd;
+        --secondary-color: #6c757d;
+        --background-color: #f8f9fa;
+        --text-color: #212529;
+        --border-color: #dee2e6;
+        --card-background: #ffffff;
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2em;
+      }
+
+      .breadcrumb {
+        margin-bottom: 2em;
+      }
+
+      .breadcrumb a {
+        font-weight: 500;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-size: 1.1em;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 2em;
+        padding-bottom: 1.5em;
+      }
+
+      header h1 {
+        font-size: 2.8em;
+        margin-bottom: 0.25em;
+      }
+
+      header p {
+        font-size: 1.1em;
+        color: var(--secondary-color);
+        max-width: 600px;
+        margin: 0.5em auto;
+      }
+
+      #table-of-contents {
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5em 2em;
+        margin-bottom: 3em;
+      }
+
+      #table-of-contents h2 {
+        font-size: 1.6em;
+        margin-top: 0;
+        margin-bottom: 1em;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5em;
+      }
+
+      .toc-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+      }
+
+      .toc-list li {
+        margin-bottom: 0.75em;
+      }
+
+      .toc-list a {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: 500;
+      }
+      .toc-list a:hover {
+        text-decoration: underline;
+      }
+
+      .module {
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5em 2em;
+        margin-bottom: 2em;
+        scroll-margin-top: 2em;
+      }
+
+      .module h2 {
+        font-size: 1.8em;
+        margin-top: 0;
+        color: var(--text-color);
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5em;
+        margin-bottom: 1em;
+      }
+
+      .module ul {
+        padding-left: 20px;
+        margin: 0.5em 0;
+      }
+
+      .module li {
+        margin-bottom: 0.5em;
+      }
+
+      .module li strong {
+        color: var(--primary-color);
+      }
+
+      .module ul ul {
+        margin-top: 0.3em;
+        margin-bottom: 0.2em;
+      }
+
+      .module ul ul li {
+        list-style-type: circle;
+      }
+
+      code {
+        background-color: #e9ecef;
+        padding: 0.2em 0.4em;
+        border-radius: 4px;
+        font-size: 0.95em;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 1.2em;
+        }
+        header h1 {
+          font-size: 2.2em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="csc106landing.html">&larr; Back to CSC Hub</a>
+      </nav>
+
+      <header>
+        <h1>CSC106: Computer Hardware Maintenance</h1>
+        <p>components · assembly · OS · motherboards · troubleshooting</p>
+      </header>
+
+      <section id="table-of-contents">
+        <h2>Table of Contents</h2>
+        <ul class="toc-list">
+          <li>
+            <a href="#module1"
+              >First look at computer parts/components and tools</a
+            >
+          </li>
+          <li>
+            <a href="#module2"
+              >Working inside a computer (assembling a desktop)</a
+            >
+          </li>
+          <li><a href="#module3">Introducing Windows operating system</a></li>
+          <li><a href="#module4">All about motherboards</a></li>
+          <li>
+            <a href="#module5">Supporting processors and upgrading memory</a>
+          </li>
+          <li><a href="#module6">Hard drives</a></li>
+          <li><a href="#module7">Installing Windows</a></li>
+          <li><a href="#module8">I/O and Storage devices</a></li>
+          <li><a href="#module9">Maintaining Windows</a></li>
+          <li>
+            <a href="#module10">Troubleshooting Windows and applications</a>
+          </li>
+          <li><a href="#module11">Troubleshooting Hardware problems</a></li>
+        </ul>
+      </section>
+
+      <main>
+        <section id="module1" class="module">
+          <h2>First look at computer parts/components and tools</h2>
+          <ul>
+            <li>
+              <strong>Overview of internal components:</strong> CPU, RAM,
+              motherboard, power supply, storage drives, expansion cards.
+            </li>
+            <li>
+              <strong>Essential tools:</strong> screwdrivers (Phillips,
+              flathead), anti‑static wrist strap, thermal paste, cable ties,
+              multimeter.
+            </li>
+            <li>
+              <strong>Safety precautions:</strong> power off, discharge static,
+              work on non‑conductive surface.
+            </li>
+          </ul>
+        </section>
+
+        <section id="module2" class="module">
+          <h2>Working inside a computer (assembling a desktop)</h2>
+          <ul>
+            <li>
+              <strong>Preparation:</strong> gather tools, open case, ground
+              yourself.
+            </li>
+            <li>
+              <strong>Installation order:</strong> power supply → motherboard →
+              CPU + cooler → RAM → storage drives → graphics card → connect
+              cables.
+            </li>
+            <li>
+              <strong>Cable management:</strong> improve airflow and
+              accessibility.
+            </li>
+            <li>
+              <strong>First boot:</strong> check POST (Power‑On Self‑Test),
+              enter BIOS/UEFI.
+            </li>
+          </ul>
+        </section>
+
+        <section id="module3" class="module">
+          <h2>Introducing Windows operating system</h2>
+          <ul>
+            <li>
+              <strong>Windows editions:</strong> Home, Pro, Enterprise – key
+              differences.
+            </li>
+            <li>
+              <strong>User interface:</strong> desktop, taskbar, start menu,
+              file explorer.
+            </li>
+            <li>
+              <strong>System tools:</strong> control panel, settings, task
+              manager, device manager.
+            </li>
+            <li>
+              <strong>File systems:</strong> NTFS, FAT32, exFAT – features and
+              compatibility.
+            </li>
+          </ul>
+        </section>
+
+        <section id="module4" class="module">
+          <h2>All about motherboards</h2>
+          <ul>
+            <li>
+              <strong>Form factors:</strong> ATX, microATX, Mini‑ITX – size and
+              expansion.
+            </li>
+            <li>
+              <strong>Chipset:</strong> controls communication between CPU, RAM,
+              peripherals.
+            </li>
+            <li>
+              <strong>Key connectors:</strong> CPU socket, RAM slots, PCIe
+              slots, SATA ports, USB headers, power connectors.
+            </li>
+            <li>
+              <strong>BIOS/UEFI:</strong> firmware settings, boot order,
+              hardware configuration.
+            </li>
+          </ul>
+        </section>
+
+        <section id="module5" class="module">
+          <h2>Supporting processors and upgrading memory</h2>
+          <ul>
+            <li>
+              <strong>CPU types:</strong> Intel (Core i3/i5/i7/i9) vs AMD
+              (Ryzen).
+            </li>
+            <li>
+              <strong>Sockets:</strong> LGA (Intel) and PGA (AMD) – must match
+              motherboard.
+            </li>
+            <li>
+              <strong>Cooling:</strong> air coolers, liquid cooling, thermal
+              paste application.
+            </li>
+            <li>
+              <strong>RAM:</strong> DDR generations (DDR3, DDR4, DDR5),
+              capacity, speed, dual‑channel configuration.
+            </li>
+            <li>
+              <strong>Upgrade procedure:</strong> check compatibility, insert
+              firmly, enable XMP in BIOS.
+            </li>
+          </ul>
+        </section>
+
+        <section id="module6" class="module">
+          <h2>Hard drives</h2>
+          <ul>
+            <li>
+              <strong>HDD (Hard Disk Drive):</strong> magnetic platters, high
+              capacity, slower, mechanical.
+            </li>
+            <li>
+              <strong>SSD (Solid State Drive):</strong> NAND flash, fast,
+              durable, no moving parts.
+            </li>
+            <li>
+              <strong>Interfaces:</strong> SATA, NVMe (M.2) – speed differences.
+            </li>
+            <li>
+              <strong>Drive partitioning:</strong> MBR vs GPT, formatting.
+            </li>
+          </ul>
+        </section>
+
+        <section id="module7" class="module">
+          <h2>Installing Windows</h2>
+          <ul>
+            <li>
+              <strong>Installation media:</strong> USB drive (Rufus) or DVD with
+              Windows ISO.
+            </li>
+            <li>
+              <strong>BIOS settings:</strong> set boot order to installation
+              media.
+            </li>
+            <li>
+              <strong>Step‑by‑step:</strong> language, license, drive selection,
+              partitioning, copying files.
+            </li>
+            <li>
+              <strong>Post‑installation:</strong> drivers, Windows Update, basic
+              software.
+            </li>
+          </ul>
+        </section>
+
+        <section id="module8" class="module">
+          <h2>I/O and Storage devices</h2>
+          <ul>
+            <li>
+              <strong>Input devices:</strong> keyboard, mouse, scanner,
+              microphone.
+            </li>
+            <li>
+              <strong>Output devices:</strong> monitor, printer, speakers.
+            </li>
+            <li>
+              <strong>External storage:</strong> USB flash drives, external
+              HDD/SSD, memory cards.
+            </li>
+            <li>
+              <strong>Connectivity:</strong> USB (types A, C), HDMI,
+              DisplayPort, Thunderbolt.
+            </li>
+          </ul>
+        </section>
+
+        <section id="module9" class="module">
+          <h2>Maintaining Windows</h2>
+          <ul>
+            <li>
+              <strong>Disk cleanup:</strong> remove temporary files, empty
+              recycle bin.
+            </li>
+            <li>
+              <strong>Defragmentation (HDD only):</strong> optimize drive
+              layout.
+            </li>
+            <li><strong>Updates:</strong> keep Windows and drivers current.</li>
+            <li>
+              <strong>Backup:</strong> file history, system restore points,
+              image backup.
+            </li>
+            <li>
+              <strong>Security:</strong> Windows Defender, firewall, avoid
+              untrusted software.
+            </li>
+          </ul>
+        </section>
+
+        <section id="module10" class="module">
+          <h2>Troubleshooting Windows and applications</h2>
+          <ul>
+            <li>
+              <strong>Common issues:</strong> slow performance, blue screen
+              (BSOD), application crashes.
+            </li>
+            <li>
+              <strong>Tools:</strong> event viewer, task manager, resource
+              monitor, reliability monitor.
+            </li>
+            <li>
+              <strong>Steps:</strong> restart, check updates, run virus scan,
+              safe mode, system restore.
+            </li>
+            <li>
+              <strong>Application‑specific:</strong> reinstall, compatibility
+              mode, check logs.
+            </li>
+          </ul>
+        </section>
+
+        <section id="module11" class="module">
+          <h2>Troubleshooting Hardware problems</h2>
+          <ul>
+            <li>
+              <strong>No power:</strong> check cables, power supply, motherboard
+              LEDs.
+            </li>
+            <li>
+              <strong>Beep codes:</strong> diagnose with POST beeps (refer to
+              manual).
+            </li>
+            <li>
+              <strong>Overheating:</strong> clean fans, reapply thermal paste,
+              check airflow.
+            </li>
+            <li>
+              <strong>Component failure:</strong> test with known‑good parts
+              (swap method).
+            </li>
+            <li>
+              <strong>Tools:</strong> multimeter (PSU testing), loopback plugs.
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
