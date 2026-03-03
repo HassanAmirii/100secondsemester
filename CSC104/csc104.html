@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSC104: Fundamentals of Data Analysis</title>
+    <style>
+      /* clean style – matches all other module pages */
+      :root {
+        --primary-color: #0d6efd;
+        --secondary-color: #6c757d;
+        --background-color: #f8f9fa;
+        --text-color: #212529;
+        --border-color: #dee2e6;
+        --card-background: #ffffff;
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2em;
+      }
+
+      .breadcrumb {
+        margin-bottom: 2em;
+      }
+
+      .breadcrumb a {
+        font-weight: 500;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-size: 1.1em;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 2em;
+        padding-bottom: 1.5em;
+      }
+
+      header h1 {
+        font-size: 2.8em;
+        margin-bottom: 0.25em;
+      }
+
+      header p {
+        font-size: 1.1em;
+        color: var(--secondary-color);
+        max-width: 600px;
+        margin: 0.5em auto;
+      }
+
+      #table-of-contents {
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5em 2em;
+        margin-bottom: 3em;
+      }
+
+      #table-of-contents h2 {
+        font-size: 1.6em;
+        margin-top: 0;
+        margin-bottom: 1em;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5em;
+      }
+
+      .toc-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+      }
+
+      .toc-list li {
+        margin-bottom: 0.75em;
+      }
+
+      .toc-list a {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: 500;
+      }
+      .toc-list a:hover {
+        text-decoration: underline;
+      }
+
+      .module {
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5em 2em;
+        margin-bottom: 2em;
+        scroll-margin-top: 2em;
+      }
+
+      .module h2 {
+        font-size: 1.8em;
+        margin-top: 0;
+        color: var(--text-color);
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5em;
+        margin-bottom: 1em;
+      }
+
+      .module ul {
+        padding-left: 20px;
+        margin: 0.5em 0;
+      }
+
+      .module li {
+        margin-bottom: 0.5em;
+      }
+
+      .module li strong {
+        color: var(--primary-color);
+      }
+
+      .module ul ul {
+        margin-top: 0.3em;
+        margin-bottom: 0.2em;
+      }
+
+      .module ul ul li {
+        list-style-type: circle;
+      }
+
+      code {
+        background-color: #e9ecef;
+        padding: 0.2em 0.4em;
+        border-radius: 4px;
+        font-size: 0.95em;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 1.2em;
+        }
+        header h1 {
+          font-size: 2.2em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="csc104landing.html">&larr; Back to CSC Hub</a>
+      </nav>
+
+      <header>
+        <h1>CSC104: Fundamentals of Data Analysis</h1>
+        <p>
+          big data · data quality · modeling · warehousing · business
+          applications
+        </p>
+      </header>
+
+      <section id="table-of-contents">
+        <h2>Table of Contents</h2>
+        <ul class="toc-list">
+          <li>
+            <a href="#module1"
+              >Module 1: Introduction to Data Analysis and Big Data</a
+            >
+          </li>
+          <li>
+            <a href="#module2">Module 2: Data Modeling and Management Tools</a>
+          </li>
+          <li>
+            <a href="#module3"
+              >Module 3: Advanced Data Storage and Analytics Concepts</a
+            >
+          </li>
+          <li>
+            <a href="#module4"
+              >Module 4: Business Applications and Strategic Impact of Data</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <main>
+        <!-- Module 1 -->
+        <section id="module1" class="module">
+          <h2>Module 1: Introduction to Data Analysis and Big Data</h2>
+          <ul>
+            <li>
+              <strong>Core Concepts:</strong> Data analysis, data science, data
+              science lifecycle (capture, maintain, process, analyze,
+              communicate).
+            </li>
+            <li>
+              <strong>Data Types & Quality:</strong>
+              <ul>
+                <li>
+                  Structured, unstructured, semi‑structured (characteristics,
+                  advantages/disadvantages).
+                </li>
+                <li>
+                  Data quality: accuracy, consistency, timeliness, completeness,
+                  relevance, validity.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Big Data Fundamentals:</strong>
+              <ul>
+                <li>Definition and examples.</li>
+                <li>The 4 Vs: Volume, Velocity, Variety, Veracity.</li>
+                <li>
+                  Evolution: from traditional processing to cloud computing and
+                  AI/ML.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Module 2 -->
+        <section id="module2" class="module">
+          <h2>Module 2: Data Modeling and Management Tools</h2>
+          <ul>
+            <li>
+              <strong>Metadata:</strong> "data about data". Characteristics:
+              descriptive, structured, contextual, relational, dynamic. Merits
+              (enhanced understanding) and demerits (overhead).
+            </li>
+            <li>
+              <strong>Data Flows and Diagrams:</strong>
+              <ul>
+                <li>Data flows (internal, external, bidirectional).</li>
+                <li>
+                  Data Flow Diagrams (DFDs): graphical, abstraction, hierarchy.
+                  Logical vs. physical. Components: processes, data flows, data
+                  stores, external entities. Levels (0‑context, 1, 2).
+                </li>
+                <li>
+                  Other diagrams: ERDs, UML class diagrams, network diagrams.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Databases and Structures (Weeks 6‑7):</strong>
+              characteristics of data structures, operational databases,
+              relational vs. non‑relational databases.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Module 3 -->
+        <section id="module3" class="module">
+          <h2>Module 3: Advanced Data Storage and Analytics Concepts</h2>
+          <ul>
+            <li>
+              <strong>Data Warehouse (DW):</strong> subject‑oriented,
+              integrated, non‑volatile, time‑variant. Architecture: data
+              sources, ETL (extract, transform, load), staging area, data
+              storage (ODS, data mart), metadata, access tools (query,
+              reporting, OLAP). Benefits and challenges (scalability, data
+              quality, integration).
+            </li>
+            <li>
+              <strong>Data Management Platforms (DMPs):</strong> role in
+              marketing/advertising. Functions: data collection (first‑party,
+              second‑party, third‑party), integration (unification,
+              normalization), storage (scalability, security), segmentation.
+            </li>
+            <li>
+              <strong>Statistical Modeling:</strong> descriptive vs. inferential
+              statistics. Forecasting techniques: predictive modeling, time
+              series analysis.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Module 4 -->
+        <section id="module4" class="module">
+          <h2>Module 4: Business Applications and Strategic Impact of Data</h2>
+          <ul>
+            <li>
+              <strong>Informed Decision Making & Business Analytics</strong>
+            </li>
+            <li><strong>Operational Efficiency and Optimization</strong></li>
+            <li><strong>Customer Understanding and Personalization</strong></li>
+            <li><strong>Risk Management and Fraud Detection</strong></li>
+            <li>
+              <strong>Market Intelligence and Competitive Advantage</strong>
+            </li>
+            <li><strong>Product Development and Innovation</strong></li>
+            <li><strong>Compliance and Regulatory Requirements</strong></li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

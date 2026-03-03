@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSC104: Data Analysis Cheat Sheet</title>
+    <style>
+      /* clean style – matches all other cheat sheets */
+      :root {
+        --primary-color: #0d6efd;
+        --secondary-color: #6c757d;
+        --background-color: #f8f9fa;
+        --text-color: #212529;
+        --border-color: #dee2e6;
+        --card-background: #ffffff;
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2em;
+      }
+
+      .breadcrumb {
+        margin-bottom: 2em;
+      }
+
+      .breadcrumb a {
+        font-weight: 500;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-size: 1.1em;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 2em;
+        padding-bottom: 1.5em;
+      }
+
+      header h1 {
+        font-size: 2.8em;
+        margin-bottom: 0.25em;
+      }
+
+      header p {
+        font-size: 1.1em;
+        color: var(--secondary-color);
+        max-width: 600px;
+        margin: 0.5em auto;
+      }
+
+      .module {
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5em 2em;
+        margin-bottom: 2em;
+      }
+
+      .module h2 {
+        font-size: 1.8em;
+        margin-top: 0;
+        color: var(--text-color);
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5em;
+        margin-bottom: 1em;
+      }
+
+      .definition-list {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .definition-list li {
+        margin-bottom: 1.25em;
+        padding-left: 1.5em;
+        position: relative;
+      }
+
+      .definition-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--primary-color);
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      .term {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 0.25em;
+      }
+
+      code {
+        font-family: "Courier New", Courier, monospace;
+        background-color: #e9ecef;
+        padding: 0.2em 0.4em;
+        border-radius: 4px;
+        font-size: 0.95em;
+      }
+
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1em;
+      }
+      .comparison-table th,
+      .comparison-table td {
+        border: 1px solid var(--border-color);
+        padding: 0.75em;
+        text-align: left;
+      }
+      .comparison-table th {
+        background-color: #f8f9fa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="csc104landing.html">&larr; Back to CSC104 Hub</a>
+      </nav>
+
+      <header>
+        <h1>CSC104: Data Analysis Cheat Sheet</h1>
+        <p>
+          big data · data quality · modeling · warehousing · business impact
+        </p>
+      </header>
+
+      <main>
+        <!-- Module 1 -->
+        <section class="module">
+          <h2>1. Introduction to Data Analysis & Big Data</h2>
+          <ul class="definition-list">
+            <li>
+              <span class="term">Data Science Lifecycle</span>
+              <strong
+                >Capture → Maintain → Process → Analyze → Communicate</strong
+              >
+            </li>
+            <li>
+              <span class="term">Data Types</span>
+              <strong>Structured:</strong> tabular, predefined schema (e.g., SQL
+              tables).<br />
+              <strong>Unstructured:</strong> text, images, video (no schema).<br />
+              <strong>Semi‑structured:</strong> XML, JSON – some organization
+              but not fully structured.
+            </li>
+            <li>
+              <span class="term">Data Quality Dimensions</span>
+              Accuracy, Consistency, Timeliness, Completeness, Relevance,
+              Validity.
+            </li>
+            <li>
+              <span class="term">4 Vs of Big Data</span>
+              <strong>Volume</strong> (scale), <strong>Velocity</strong> (speed
+              of generation), <strong>Variety</strong> (different forms),
+              <strong>Veracity</strong> (uncertainty/quality).
+            </li>
+          </ul>
+        </section>
+
+        <!-- Module 2 -->
+        <section class="module">
+          <h2>2. Data Modeling and Management Tools</h2>
+          <ul class="definition-list">
+            <li>
+              <span class="term">Metadata</span>
+              “Data about data”. Characteristics: descriptive, structured,
+              contextual, relational, dynamic. Merits: better understanding,
+              discovery. Demerits: overhead, maintenance.
+            </li>
+            <li>
+              <span class="term">Data Flow Diagrams (DFD)</span>
+              Graphical representation of data movement.
+              <strong>Components:</strong> processes, data flows, data stores,
+              external entities. <strong>Levels:</strong> context (0‑level),
+              1‑level, 2‑level (decomposition). Logical vs. physical DFDs.
+            </li>
+            <li>
+              <span class="term">Other Diagrams</span>
+              ERD (entity‑relationship), UML class diagrams, network diagrams.
+            </li>
+            <li>
+              <span class="term">Databases</span>
+              <strong>Operational databases:</strong> day‑to‑day
+              transactions.<br />
+              <strong>Relational (SQL):</strong> tables with relationships.<br />
+              <strong>Non‑relational (NoSQL):</strong> document, key‑value,
+              graph, columnar.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Module 3 -->
+        <section class="module">
+          <h2>3. Advanced Data Storage & Analytics</h2>
+          <ul class="definition-list">
+            <li>
+              <span class="term">Data Warehouse (DW)</span>
+              Subject‑oriented, integrated, non‑volatile, time‑variant.
+              Architecture: sources → ETL → staging → data storage (ODS, data
+              marts) → access tools (query, reporting, OLAP). Benefits: unified
+              view, historical analysis. Challenges: scalability, data quality,
+              integration cost.
+            </li>
+            <li>
+              <span class="term">Data Management Platform (DMP)</span>
+              Used in marketing/advertising. Collects first‑party, second‑party,
+              third‑party data; integrates, normalizes, segments audiences.
+            </li>
+            <li>
+              <span class="term">Statistical Modeling</span>
+              <strong>Descriptive:</strong> summarise data (mean, median).<br />
+              <strong>Inferential:</strong> draw conclusions from samples.<br />
+              <strong>Forecasting:</strong> predictive modeling, time series
+              analysis.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Module 4 -->
+        <section class="module">
+          <h2>4. Business Applications of Data</h2>
+          <ul class="definition-list">
+            <li>
+              <span class="term">Key Impact Areas</span>
+              <ul
+                style="
+                  margin-top: 0.3em;
+                  list-style-type: circle;
+                  padding-left: 1.5em;
+                "
+              >
+                <li>Informed decision making & business analytics</li>
+                <li>Operational efficiency & optimisation</li>
+                <li>Customer understanding & personalisation</li>
+                <li>Risk management & fraud detection</li>
+                <li>Market intelligence & competitive advantage</li>
+                <li>Product development & innovation</li>
+                <li>Compliance & regulatory requirements</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
