@@ -4,7 +4,171 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>100-Level CS Student Resources</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* clean style – matching the course cards aesthetic */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
+        line-height: 1.6;
+        background-color: #f8f9fa;
+        color: #212529;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #dee2e6;
+      }
+
+      header h1 {
+        font-size: 2.8rem;
+        margin-bottom: 0.5rem;
+        color: #0d6efd;
+      }
+
+      header .subtitle {
+        font-size: 1.2rem;
+        color: #6c757d;
+        max-width: 700px;
+        margin: 0 auto 1rem;
+      }
+
+      .creator-credit {
+        font-size: 1rem;
+        color: #495057;
+        margin-top: 1rem;
+      }
+
+      .owner-link {
+        color: #0d6efd;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .owner-link:hover {
+        text-decoration: underline;
+      }
+
+      #course-materials h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: #212529;
+        border-left: 5px solid #0d6efd;
+        padding-left: 1rem;
+      }
+
+      .resource-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .resource-card {
+        background-color: #ffffff;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 1.5rem;
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      .resource-card:hover {
+        border-color: #0d6efd;
+        box-shadow: 0 8px 16px rgba(13, 110, 253, 0.15);
+        transform: translateY(-2px);
+      }
+
+      .resource-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.75rem;
+        color: #0d6efd;
+      }
+
+      .resource-card p {
+        color: #495057;
+        margin-bottom: 1.25rem;
+        line-height: 1.5;
+        min-height: 3rem;
+      }
+
+      .resource-link {
+        display: inline-block;
+        background-color: #0d6efd;
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        font-weight: 500;
+        transition: background-color 0.2s;
+      }
+
+      .resource-link:hover {
+        background-color: #0b5ed7;
+      }
+
+      #study-strategies {
+        margin-top: 2rem;
+      }
+
+      #study-strategies .resource-card {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      #study-strategies h2 {
+        font-size: 1.8rem;
+        color: #212529;
+        margin-bottom: 1rem;
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem 1rem 1rem;
+        color: #6c757d;
+        border-top: 1px solid #dee2e6;
+        margin-top: 2rem;
+      }
+
+      footer a {
+        color: #0d6efd;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 2.2rem;
+        }
+        .resource-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
     <main class="container">
@@ -14,71 +178,81 @@
           A curated collection of study materials and outlines for first-year
           students at KWASU.
         </p>
-
         <p class="creator-credit">
           main pdf compiled by
           <a
             href="https://api.whatsapp.com/send?phone=2349130699671&text=hello%20mr%20oromi%2C%20from%20%22kwasucsnotes%22%2C%20thanks%20for%20the%20compilation%2E"
             target="_blank"
             class="owner-link"
-            >Scholar Oromi
-          </a>
+            >Scholar Oromi</a
+          >
         </p>
       </header>
 
       <section id="course-materials">
         <h2>Course Materials</h2>
         <div class="resource-grid">
+          <!-- COS102 -->
           <div class="resource-card">
-            <h3>COS101: Intro to Computer Science</h3>
+            <h3>COS102: Problem‑Solving & Programming</h3>
             <p>
-              Foundational concepts of computing, problem-solving, and
-              introductory programming principles.
+              Introduction to algorithmic thinking, C programming basics, and
+              event‑driven concepts using Visual Basic 6.
             </p>
             <a href="CS102/cslanding.html" class="resource-link"
               >View Resources</a
             >
           </div>
+
+          <!-- GST112 -->
           <div class="resource-card">
-            <h3>GST111: Use of English I</h3>
+            <h3>GST112: Nigerian Peoples & Culture</h3>
             <p>
-              Core materials on communication skills, grammar, and academic
-              writing standards.
+              Exploration of ethnic origins, pre‑colonial political systems,
+              arts, trade, and ethical values in Nigeria.
             </p>
-            <a href="GST111/gstlanding.html" class="resource-link"
+            <a href="GST112/gstlanding.html" class="resource-link"
               >View Resources</a
             >
           </div>
+
+          <!-- CSC102 -->
           <div class="resource-card">
-            <h3>CSC101: Computer Science Fundamentals</h3>
+            <h3>CSC102: PHP Programming</h3>
             <p>
-              University-specific introduction to the core tenets of computer
-              science and its applications.
+              Server‑side scripting with PHP: syntax, control flow, arrays, web
+              interaction, MySQL, and the GD library.
             </p>
-            <a href="CSC101/csclanding.html" class="resource-link"
+            <a href="CSC102/csclanding.html" class="resource-link"
               >View Resources</a
             >
           </div>
+
+          <!-- MTH102 -->
           <div class="resource-card">
-            <h3>MTH101: Algebra & Trigonometry</h3>
+            <h3>MTH102: Calculus & Algebra</h3>
             <p>
-              Resources covering the real number system, set theory, quadratic
-              equations, and trigonometry.
+              Mathematical foundations, limits, differentiation, integration,
+              sequences, vectors, matrices, and differential equations.
             </p>
             <a href="/MTH101/mathlanding.html" class="resource-link"
               >View Resources</a
             >
           </div>
+
+          <!-- PHY102 -->
           <div class="resource-card">
-            <h3>PHY101: General Physics I</h3>
+            <h3>PHY102: Electricity & Magnetism</h3>
             <p>
-              Materials on mechanics, properties of matter, heat, and basic
-              principles of physics.
+              Electric charge, DC circuits, Ohm’s law, Kirchhoff’s rules,
+              electromagnetic induction, and transformers.
             </p>
-            <a href="PHY101/physicslanding.html" class="resource-link"
+            <a href="PHY102/physicslanding.html" class="resource-link"
               >View Resources</a
             >
           </div>
+
+          <!-- CSC104 -->
           <div class="resource-card">
             <h3>CSC104: Fundamentals of Data Analysis</h3>
             <p>
@@ -89,12 +263,24 @@
               >View Resources</a
             >
           </div>
+
+          <!-- CSC106 -->
+          <div class="resource-card">
+            <h3>CSC106: Hardware Maintenance</h3>
+            <p>
+              Introduction to hardware components, maintenance procedures, and
+              troubleshooting techniques for computer systems.
+            </p>
+            <a href="CSC106/csc106landing.html" class="resource-link"
+              >View Resources</a
+            >
+          </div>
         </div>
       </section>
+
       <section id="study-strategies">
         <div class="resource-card single-card">
           <h2>Doing well in your courses</h2>
-
           <p>
             a guide by Andrej Karpathy on effective study techniques, time
             management, and maximizing learning outcomes.
