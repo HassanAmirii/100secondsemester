@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COS102: Problem‑Solving & Programming</title>
+    <style>
+      /* COS102 – back to the original clean style (same as landing) */
+      :root {
+        --primary-color: #0d6efd;
+        --secondary-color: #6c757d;
+        --background-color: #f8f9fa;
+        --text-color: #212529;
+        --border-color: #dee2e6;
+        --card-background: #ffffff;
+        --hover-bg-color: #f8f9fa;
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2em;
+      }
+
+      .breadcrumb {
+        margin-bottom: 2em;
+      }
+
+      .breadcrumb a {
+        font-weight: 500;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-size: 1.1em;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 2.5em;
+        padding-bottom: 1.5em;
+      }
+
+      header h1 {
+        font-size: 2.8em;
+        margin-bottom: 0.25em;
+      }
+
+      header p {
+        font-size: 1.1em;
+        color: var(--secondary-color);
+        max-width: 600px;
+        margin: 0.5em auto;
+      }
+
+      #table-of-contents {
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5em 2em;
+        margin-bottom: 3em;
+      }
+
+      #table-of-contents h2 {
+        font-size: 1.6em;
+        margin-top: 0;
+        margin-bottom: 1em;
+        color: var(--text-color);
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5em;
+      }
+
+      .toc-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8em 1.5em;
+      }
+
+      .toc-list li {
+        margin-bottom: 0.4em;
+        flex: 0 0 auto;
+        width: calc(50% - 1em);
+      }
+
+      .toc-list a {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: 500;
+        display: inline-block;
+        padding: 0.3em 1em;
+        background: #f2f4f6;
+        border-radius: 30px;
+        transition: 0.2s;
+      }
+
+      .toc-list a:hover {
+        background: var(--primary-color);
+        color: white;
+      }
+
+      .module {
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5em 2em;
+        margin-bottom: 2em;
+        scroll-margin-top: 2em;
+      }
+
+      .module h2 {
+        font-size: 1.8em;
+        margin-top: 0;
+        color: var(--text-color);
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5em;
+        margin-bottom: 1em;
+      }
+
+      .module ul {
+        padding-left: 20px;
+        margin: 0.5em 0;
+      }
+
+      .module li {
+        margin-bottom: 0.5em;
+      }
+
+      .module li strong {
+        color: var(--primary-color);
+      }
+
+      .module ul ul {
+        margin-top: 0.3em;
+        margin-bottom: 0.2em;
+      }
+
+      .module ul ul li {
+        list-style-type: circle;
+      }
+
+      code {
+        background: #f0f2f4;
+        padding: 0.2em 0.4em;
+        border-radius: 4px;
+        font-size: 0.9em;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 1.2em;
+        }
+        header h1 {
+          font-size: 2.2em;
+        }
+        .toc-list li {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="cslanding.html">&larr; Back to COS102 hub</a>
+      </nav>
+
+      <header>
+        <h1>COS102: Problem‑Solving & Programming</h1>
+        <p>structured learning · algorithms · C · Visual Basic 6</p>
+      </header>
+
+      <!-- Table of Contents -->
+      <section id="table-of-contents">
+        <h2>Modules at a glance</h2>
+        <ul class="toc-list">
+          <li><a href="#module1">1. Problem‑Solving techniques</a></li>
+          <li><a href="#module2">2. C programming language</a></li>
+          <li><a href="#module3">3. Visual Basic 6 (VB6)</a></li>
+        </ul>
+      </section>
+
+      <main>
+        <!-- MODULE 1 – Problem Solving -->
+        <section id="module1" class="module">
+          <h2>Module 1: Introduction to Problem‑Solving Techniques</h2>
+          <ul>
+            <li>
+              <strong>Core concepts:</strong> zero‑I.Q. computer & programmer
+              responsibility, problem formulation, the 5‑stage program
+              development cycle (analysis, design, coding, testing,
+              documentation).
+            </li>
+            <li>
+              <strong>Algorithms:</strong> definition (complete, unambiguous,
+              finite steps), choosing best algorithm (time requirement), steps
+              in algorithm development, examples: average of three numbers,
+              simple interest, area of triangle, largest of three, factorial,
+              prime testing.
+            </li>
+            <li>
+              <strong>Flowcharts:</strong> ISO symbols – oval (terminal),
+              parallelogram (I/O), rectangle (process), diamond (decision), flow
+              lines, connectors (on‑page / off‑page). advantages: pictorial
+              logic, easy checking, communication.
+            </li>
+            <li>
+              <strong>Pseudocode:</strong> abstract English‑like description,
+              easy to read/modify. other tools: hierarchy charts (HIPO) for
+              module relationships.
+            </li>
+          </ul>
+        </section>
+
+        <!-- MODULE 2 – C programming -->
+        <section id="module2" class="module">
+          <h2>Module 2: Features of the ‘C’ Programming Language</h2>
+          <ul>
+            <li>
+              <strong>Introduction to C:</strong> Dennis Ritchie, Bell Labs
+              (early 1970s). features – simple, versatile, rich operators, fast
+              execution, system programming. applications: UNIX, compilers,
+              databases.
+            </li>
+            <li>
+              <strong>Fundamentals:</strong> character set, structure of a C
+              program, data types (int, float, double, char), operations &
+              expressions, assignment statement, variables & pointers (memory
+              address).
+            </li>
+            <li>
+              <strong>Input / output:</strong> <code>printf()</code> function,
+              statements end with <code>;</code>.
+            </li>
+            <li>
+              <strong>Control flow:</strong> conditional (<code>if</code>,
+              <code>else</code>, ladder, nested <code>if-else</code> – using
+              <code>==</code>), loops (<code>while</code>,
+              <code>do-while</code>, <code>for</code>),
+              <code>break</code>/<code>continue</code>,
+              <code>switch</code> (multi‑branch),
+              <code>goto</code> (unconditional).
+            </li>
+          </ul>
+        </section>
+
+        <!-- MODULE 3 – Visual Basic 6 -->
+        <section id="module3" class="module">
+          <h2>Module 3: Introduction to Visual Basic 6 (VB6)</h2>
+          <ul>
+            <li>
+              <strong>Core concepts:</strong> object‑based & event‑driven
+              programming, GUI apps, rapid application development (RAD).
+            </li>
+            <li>
+              <strong>IDE components:</strong> menu bar, tool bar, tool box,
+              properties window, project explorer, code window, form layout
+              window, immediate window (debugging), object browser.
+            </li>
+            <li>
+              <strong>Controls & objects:</strong> Label, TextBox,
+              CommandButton, OptionButton, CheckBox, Frame, ListBox, ComboBox,
+              DriveListBox, DirListBox, FileListBox, Data Control, Timer.
+              <em>Form is an object but not a control.</em>
+            </li>
+            <li>
+              <strong>Common properties:</strong> visual (BackColor, ForeColor,
+              Font, Caption, Text, Visible), layout (Left, Top, Width, Height),
+              behavioural (Enabled, MousePointer, TabIndex).
+            </li>
+            <li>
+              <strong>Programming basics:</strong> start Standard EXE, set
+              properties (design‑time vs. run‑time), write event procedures
+              (e.g., <code>Command1_Click()</code>), comments with apostrophe
+              (<code>'</code>), naming conventions (<code>txt</code> for
+              TextBox, <code>cmd</code> for CommandButton).
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

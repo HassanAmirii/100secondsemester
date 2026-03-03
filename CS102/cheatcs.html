@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COS102 · Complete Cheat Sheet</title>
+    <style>
+      /* clean style – matching original COS101 cheat sheet but with COS102 content */
+      :root {
+        --primary-color: #0d6efd;
+        --secondary-color: #6c757d;
+        --background-color: #f8f9fa;
+        --text-color: #212529;
+        --border-color: #dee2e6;
+        --card-background: #ffffff;
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2em;
+      }
+
+      .breadcrumb {
+        margin-bottom: 2em;
+      }
+
+      .breadcrumb a {
+        font-weight: 500;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-size: 1.1em;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 2em;
+        padding-bottom: 1.5em;
+      }
+
+      header h1 {
+        font-size: 2.8em;
+        margin-bottom: 0.25em;
+      }
+
+      header p {
+        font-size: 1.1em;
+        color: var(--secondary-color);
+        max-width: 600px;
+        margin: 0.5em auto;
+      }
+
+      .module {
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5em 2em;
+        margin-bottom: 2em;
+      }
+
+      .module h2 {
+        font-size: 1.8em;
+        margin-top: 0;
+        color: var(--text-color);
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5em;
+        margin-bottom: 1em;
+      }
+
+      .definition-list {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .definition-list li {
+        margin-bottom: 1.25em;
+        padding-left: 1.5em;
+        position: relative;
+      }
+
+      .definition-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--primary-color);
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      .term {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 0.25em;
+      }
+
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1em;
+      }
+      .comparison-table th,
+      .comparison-table td {
+        border: 1px solid var(--border-color);
+        padding: 0.75em;
+        text-align: left;
+      }
+      .comparison-table th {
+        background-color: #f8f9fa;
+      }
+
+      code {
+        background: #f0f2f4;
+        padding: 0.2em 0.4em;
+        border-radius: 4px;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="cslanding.html">&larr; Back to COS102 Hub</a>
+      </nav>
+
+      <header>
+        <h1>COS102: Complete Cheat Sheet</h1>
+        <p>problem‑solving · C · Visual Basic 6 — one‑page summary</p>
+      </header>
+
+      <main>
+        <!-- MODULE 1 – Problem Solving -->
+        <section class="module">
+          <h2>1. Problem‑Solving Techniques</h2>
+          <ul class="definition-list">
+            <li>
+              <span class="term">Program Development Cycle</span>
+              <strong>Analysis</strong> (define problem, I/O)<br />
+              <strong>Design</strong> (plan algorithm)<br />
+              <strong>Coding</strong> (implementation)<br />
+              <strong>Testing & Debugging</strong><br />
+              <strong>Documentation</strong>
+            </li>
+            <li>
+              <span class="term">Algorithm essentials</span>
+              <strong>Definition:</strong> finite, unambiguous steps for a
+              solution.<br />
+              <strong>Factors:</strong> time requirement (most important),
+              definiteness, finiteness, effectiveness, generality.<br />
+              <strong>Examples:</strong> average of three numbers, factorial,
+              prime testing.
+            </li>
+            <li>
+              <span class="term">Flowchart symbols (ISO)</span>
+              <strong>Oval:</strong> start/stop<br />
+              <strong>Parallelogram:</strong> input/output<br />
+              <strong>Rectangle:</strong> process (arithmetic, store)<br />
+              <strong>Diamond:</strong> decision (conditional)<br />
+              <strong>Flow lines, connectors</strong> (on‑page/off‑page)
+            </li>
+            <li>
+              <span class="term">Pseudocode</span>
+              English‑like description of logic – easy to read and modify. No
+              strict syntax.
+            </li>
+            <li>
+              <span class="term">Other tools</span>
+              Hierarchy charts (HIPO) show module relationships.
+            </li>
+          </ul>
+        </section>
+
+        <!-- MODULE 2 – C Programming -->
+        <section class="module">
+          <h2>2. C Programming Language</h2>
+          <ul class="definition-list">
+            <li>
+              <span class="term">C fundamentals</span>
+              <strong>Creator:</strong> Dennis Ritchie (Bell Labs, 1970s).<br />
+              <strong>Features:</strong> simple, versatile, rich operators,
+              fast, system programming.<br />
+              <strong>Data types:</strong> int, float, double, char.
+            </li>
+            <li>
+              <span class="term">Structure & I/O</span>
+              <strong>Statements end with</strong> <code>;</code><br />
+              <strong>Output:</strong> <code>printf("format", vars);</code
+              ><br />
+              <strong>Variables & pointers:</strong> pointers store memory
+              addresses.
+            </li>
+            <li>
+              <span class="term">Control flow – conditional</span>
+              <code>if (condition) { … } else { … }</code><br />
+              <code>else if ladder</code>, nested
+              <code>if-else</code> (comparison with <code>==</code>)
+            </li>
+            <li>
+              <span class="term">Loops</span>
+              <code>while</code> (entry‑checked),
+              <code>do-while</code> (executes at least once),
+              <code>for</code> (initialization; condition; increment)
+            </li>
+            <li>
+              <span class="term">Other flow</span>
+              <code>break</code> (exit loop), <code>continue</code> (skip
+              iteration), <code>switch</code> (multi‑branch),
+              <code>goto</code> (unconditional jump)
+            </li>
+          </ul>
+        </section>
+
+        <!-- MODULE 3 – Visual Basic 6 -->
+        <section class="module">
+          <h2>3. Visual Basic 6 (VB6)</h2>
+          <ul class="definition-list">
+            <li>
+              <span class="term">Core paradigm</span>
+              <strong>Object‑based, event‑driven</strong> — code executes in
+              response to events (clicks, timer).<br />
+              <strong>RAD:</strong> rapid application development with GUI.
+            </li>
+            <li>
+              <span class="term">IDE components</span>
+              Toolbox, Properties window, Project Explorer, Code window, Form
+              Layout, Immediate window (debugging), Object Browser.
+            </li>
+            <li>
+              <span class="term">Common controls</span>
+              Label, TextBox, CommandButton, OptionButton, CheckBox, Frame,
+              ListBox, ComboBox, DriveListBox, DirListBox, FileListBox,
+              Timer.<br />
+              <em>Form is an object but not a control.</em>
+            </li>
+            <li>
+              <span class="term">Key properties</span>
+              <strong>Visual:</strong> BackColor, ForeColor, Font, Caption,
+              Text, Visible.<br />
+              <strong>Layout:</strong> Left, Top, Width, Height.<br />
+              <strong>Behavioural:</strong> Enabled, MousePointer, TabIndex.
+            </li>
+            <li>
+              <span class="term">Programming basics</span>
+              <strong>Event procedure:</strong> e.g.,
+              <code>Command1_Click()</code><br />
+              <strong>Comment:</strong> apostrophe <code>'</code><br />
+              <strong>Naming convention:</strong> <code>txt</code> for TextBox,
+              <code>cmd</code> for CommandButton.
+            </li>
+            <li>
+              <span class="term">Design‑time vs. run‑time</span>
+              Properties can be set in the Properties window (design) or via
+              code (run).
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
