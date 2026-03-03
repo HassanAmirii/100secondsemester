@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHY102: Electricity and Magnetism</title>
+    <style>
+      /* clean style – matching the original PHY101 template, now with PHY102 content */
+      :root {
+        --primary-color: #0d6efd;
+        --secondary-color: #6c757d;
+        --background-color: #f8f9fa;
+        --text-color: #212529;
+        --border-color: #dee2e6;
+        --card-background: #ffffff;
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2em;
+      }
+
+      .breadcrumb {
+        margin-bottom: 2em;
+      }
+
+      .breadcrumb a {
+        font-weight: 500;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-size: 1.1em;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 2em;
+        padding-bottom: 1.5em;
+      }
+
+      header h1 {
+        font-size: 2.8em;
+        margin-bottom: 0.25em;
+      }
+
+      header p {
+        font-size: 1.1em;
+        color: var(--secondary-color);
+        max-width: 600px;
+        margin: 0.5em auto;
+      }
+
+      #table-of-contents {
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5em 2em;
+        margin-bottom: 3em;
+      }
+
+      #table-of-contents h2 {
+        font-size: 1.6em;
+        margin-top: 0;
+        margin-bottom: 1em;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5em;
+      }
+
+      .toc-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+      }
+
+      .toc-list li {
+        margin-bottom: 0.75em;
+        break-inside: avoid;
+      }
+
+      .toc-list a {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: 500;
+      }
+      .toc-list a:hover {
+        text-decoration: underline;
+      }
+
+      .module {
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5em 2em;
+        margin-bottom: 2em;
+        scroll-margin-top: 2em;
+      }
+
+      .module h2 {
+        font-size: 1.8em;
+        margin-top: 0;
+        color: var(--text-color);
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5em;
+        margin-bottom: 1em;
+      }
+
+      .module ul {
+        padding-left: 20px;
+        margin: 0.5em 0;
+      }
+
+      .module li {
+        margin-bottom: 0.5em;
+      }
+
+      .module li strong {
+        color: var(--primary-color);
+      }
+
+      .module ul ul {
+        margin-top: 0.3em;
+        margin-bottom: 0.2em;
+      }
+
+      .module ul ul li {
+        list-style-type: circle;
+      }
+
+      code {
+        background-color: #e9ecef;
+        padding: 0.2em 0.4em;
+        border-radius: 4px;
+        font-size: 0.95em;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 1.2em;
+        }
+        header h1 {
+          font-size: 2.2em;
+        }
+        .toc-list {
+          columns: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="physicslanding.html">&larr; Back to PHY102 Hub</a>
+      </nav>
+
+      <header>
+        <h1>PHY102: Electricity and Magnetism</h1>
+        <p>electric charge · DC circuits · electromagnetic induction</p>
+      </header>
+
+      <section id="table-of-contents">
+        <h2>Table of Contents</h2>
+        <ul class="toc-list">
+          <li><a href="#wk1">WK 1: Electric Charge and Field</a></li>
+          <li><a href="#wk2">WK 2: DC Principles I</a></li>
+          <li><a href="#wk3">WK 3: DC Principles II</a></li>
+          <li><a href="#wk4">WK 4: DC Circuit Analysis I</a></li>
+          <li><a href="#wk5">WK 5: DC Circuit Analysis II</a></li>
+          <li><a href="#wk6">WK 6: Electromagnetic Induction</a></li>
+          <li><a href="#wk7">WK 7: Comprehensive Review</a></li>
+        </ul>
+      </section>
+
+      <main>
+        <!-- Week 1 -->
+        <section id="wk1" class="module">
+          <h2>WK 1: Foundational Concepts of Electric Charge and Field</h2>
+          <ul>
+            <li>
+              <strong>Electric Charge:</strong> protons (+), electrons (−);
+              conservation of charge.
+            </li>
+            <li>
+              <strong>Coulomb's Law:</strong> electric force
+              <code>F = k·q₁q₂/r²</code> (k = 8.99×10⁹ N·m²/C²).
+            </li>
+            <li>
+              <strong>Electric Field:</strong> <code>E = F/q</code>; field lines
+              originate on +, terminate on −.
+            </li>
+            <li>
+              <strong>Electric Potential Difference (Voltage):</strong>
+              <code>V = W/q</code> (energy per unit charge).
+            </li>
+          </ul>
+        </section>
+
+        <!-- Week 2 -->
+        <section id="wk2" class="module">
+          <h2>WK 2: Basic Principles of Direct Current (DC) I</h2>
+          <ul>
+            <li>
+              <strong>Electric Current:</strong>
+              <code>I = ΔQ/Δt</code> (amperes).
+            </li>
+            <li>
+              <strong>Conductors</strong> (allow free electron flow) vs.
+              <strong>Insulators</strong> (resist flow).
+            </li>
+            <li>
+              <strong>Ohm's Law:</strong> <code>V = I R</code> (voltage =
+              current × resistance).
+            </li>
+          </ul>
+        </section>
+
+        <!-- Week 3 -->
+        <section id="wk3" class="module">
+          <h2>WK 3: Basic Principles of Direct Current (DC) II</h2>
+          <ul>
+            <li>
+              <strong>Resistance & Resistivity:</strong>
+              <code>R = ρ L/A</code> (ρ = resistivity, L = length, A =
+              cross‑section).
+            </li>
+            <li>
+              <strong>Temperature effect:</strong>
+              <code>R(T) = R₀[1 + α(T - T₀)]</code> (α = temperature
+              coefficient).
+            </li>
+            <li>
+              <strong>Electric Power:</strong>
+              <ul>
+                <li><code>P = I V</code></li>
+                <li><code>P = I² R</code></li>
+                <li><code>P = V² / R</code></li>
+              </ul>
+            </li>
+            <li>
+              <strong>Energy:</strong> <code>E = P · t</code> (joules or
+              kilowatt‑hours).
+            </li>
+          </ul>
+        </section>
+
+        <!-- Week 4 -->
+        <section id="wk4" class="module">
+          <h2>WK 4: DC Circuit Analysis I</h2>
+          <ul>
+            <li>
+              <strong>Resistors in Series:</strong> total resistance
+              <code>Rₜ = R₁ + R₂ + R₃ + …</code> (same current).
+            </li>
+            <li>
+              <strong>Resistors in Parallel:</strong> equivalent resistance
+              <code>1/Rₜ = 1/R₁ + 1/R₂ + 1/R₃ + …</code> (same voltage).
+            </li>
+          </ul>
+        </section>
+
+        <!-- Week 5 -->
+        <section id="wk5" class="module">
+          <h2>WK 5: DC Circuit Analysis II</h2>
+          <ul>
+            <li>
+              <strong>Electromotive Force (EMF):</strong> voltage provided by a
+              source (battery).
+            </li>
+            <li>
+              <strong>Internal Resistance (r):</strong> terminal voltage
+              <code>V = EMF − I r</code>.
+            </li>
+            <li>
+              <strong>Kirchhoff's Rules:</strong>
+              <ul>
+                <li>
+                  <strong>Junction rule:</strong> sum of currents entering = sum
+                  leaving (charge conservation).
+                </li>
+                <li>
+                  <strong>Loop rule:</strong> sum of potential differences
+                  around any closed loop = 0 (energy conservation).
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Week 6 -->
+        <section id="wk6" class="module">
+          <h2>WK 6: Electromagnetic Induction</h2>
+          <ul>
+            <li>
+              <strong>Link between electricity and magnetism:</strong> moving
+              charges create magnetic fields; changing fields induce EMF.
+            </li>
+            <li>
+              <strong>Faraday's Law:</strong> induced EMF
+              <code>ε = −N ΔΦ/Δt</code> (Φ = magnetic flux).
+            </li>
+            <li>
+              <strong>Lenz's Law:</strong> induced current opposes the change in
+              flux (negative sign).
+            </li>
+            <li>
+              <strong>Transformers:</strong> change AC voltage using mutual
+              induction; <code>Vₛ/Vₚ = Nₛ/Nₚ</code>.
+            </li>
+            <li>
+              <strong>Self / Mutual Induction:</strong> inductance L; induced
+              EMF <code>ε = −L dI/dt</code>.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Week 7 -->
+        <section id="wk7" class="module">
+          <h2>WK 7: Comprehensive Review and Problem Solving</h2>
+          <ul>
+            <li>Review of core concepts from Weeks 1–6.</li>
+            <li>
+              Practice problems: Coulomb's law, resistor networks, Kirchhoff's
+              laws, power calculations, induction problems.
+            </li>
+            <li>
+              Solved examples and multiple‑choice questions for exam
+              preparation.
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

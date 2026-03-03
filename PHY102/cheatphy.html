@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHY102: Complete Cheat Sheet</title>
+    <style>
+      /* clean style – matching the original cheat sheet templates */
+      :root {
+        --primary-color: #0d6efd;
+        --secondary-color: #6c757d;
+        --background-color: #f8f9fa;
+        --text-color: #212529;
+        --border-color: #dee2e6;
+        --card-background: #ffffff;
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2em;
+      }
+
+      .breadcrumb {
+        margin-bottom: 2em;
+      }
+
+      .breadcrumb a {
+        font-weight: 500;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-size: 1.1em;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 2em;
+        padding-bottom: 1.5em;
+      }
+
+      header h1 {
+        font-size: 2.8em;
+        margin-bottom: 0.25em;
+      }
+
+      header p {
+        font-size: 1.1em;
+        color: var(--secondary-color);
+        max-width: 600px;
+        margin: 0.5em auto;
+      }
+
+      .module {
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5em 2em;
+        margin-bottom: 2em;
+      }
+
+      .module h2 {
+        font-size: 1.8em;
+        margin-top: 0;
+        color: var(--text-color);
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5em;
+        margin-bottom: 1em;
+      }
+
+      .formula-list {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .formula-list li {
+        margin-bottom: 1.25em;
+        padding-left: 1.5em;
+        position: relative;
+      }
+
+      .formula-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--primary-color);
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      .formula-title {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 0.25em;
+      }
+
+      code {
+        font-family: "Courier New", Courier, monospace;
+        background-color: #e9ecef;
+        padding: 0.2em 0.4em;
+        border-radius: 4px;
+        font-size: 0.95em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="physicslanding.html">&larr; Back to PHY102 Hub</a>
+      </nav>
+
+      <header>
+        <h1>PHY102: Complete Cheat Sheet</h1>
+        <p>electric charge · DC circuits · electromagnetic induction</p>
+      </header>
+
+      <main>
+        <!-- Week 1: Electric Charge and Field -->
+        <section class="module">
+          <h2>Week 1: Electric Charge and Field</h2>
+          <ul class="formula-list">
+            <li>
+              <span class="formula-title">Coulomb's Law</span>
+              <code>F = k·q₁q₂ / r²</code> where
+              <code>k = 8.99×10⁹ N·m²/C²</code><br />
+              Force is attractive for opposite charges, repulsive for like
+              charges.
+            </li>
+            <li>
+              <span class="formula-title">Electric Field</span>
+              <code>E = F / q</code> (N/C). For a point charge:
+              <code>E = k·q / r²</code> (direction away from +q).
+            </li>
+            <li>
+              <span class="formula-title"
+                >Electric Potential Difference (Voltage)</span
+              >
+              <code>V = W / q</code> (work per unit charge). For a point charge:
+              <code>V = k·q / r</code>.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Week 2 & 3: DC Principles -->
+        <section class="module">
+          <h2>Weeks 2–3: DC Principles</h2>
+          <ul class="formula-list">
+            <li>
+              <span class="formula-title">Electric Current</span>
+              <code>I = ΔQ / Δt</code> (amperes).
+            </li>
+            <li>
+              <span class="formula-title">Ohm's Law</span>
+              <code>V = I R</code>
+            </li>
+            <li>
+              <span class="formula-title">Resistance & Resistivity</span>
+              <code>R = ρ L / A</code> (ρ = resistivity, L = length, A =
+              cross‑sectional area).
+            </li>
+            <li>
+              <span class="formula-title">Temperature Dependence</span>
+              <code>R(T) = R₀ [1 + α (T – T₀)]</code> (α = temperature
+              coefficient).
+            </li>
+            <li>
+              <span class="formula-title">Electric Power</span>
+              <code>P = I V = I² R = V² / R</code> (watts).
+            </li>
+            <li>
+              <span class="formula-title">Electrical Energy</span>
+              <code>E = P · t</code> (joules or kWh).
+            </li>
+          </ul>
+        </section>
+
+        <!-- Week 4: DC Circuit Analysis I -->
+        <section class="module">
+          <h2>Week 4: Resistor Networks</h2>
+          <ul class="formula-list">
+            <li>
+              <span class="formula-title">Series Resistance</span>
+              <code>Rₜ = R₁ + R₂ + R₃ + …</code> (same current through all).
+            </li>
+            <li>
+              <span class="formula-title">Parallel Resistance</span>
+              <code>1/Rₜ = 1/R₁ + 1/R₂ + 1/R₃ + …</code> (same voltage across
+              all).
+            </li>
+            <li>
+              <span class="formula-title"
+                >Special case (two resistors in parallel)</span
+              >
+              <code>Rₜ = (R₁ R₂) / (R₁ + R₂)</code>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Week 5: DC Circuit Analysis II -->
+        <section class="module">
+          <h2>Week 5: EMF, Internal Resistance, Kirchhoff</h2>
+          <ul class="formula-list">
+            <li>
+              <span class="formula-title">Terminal Voltage</span>
+              <code>V = EMF – I r</code> (r = internal resistance).
+            </li>
+            <li>
+              <span class="formula-title">Kirchhoff's Junction Rule</span>
+              Sum of currents entering a junction = sum of currents leaving.
+            </li>
+            <li>
+              <span class="formula-title">Kirchhoff's Loop Rule</span>
+              Sum of potential differences around any closed loop = 0.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Week 6: Electromagnetic Induction -->
+        <section class="module">
+          <h2>Week 6: Electromagnetic Induction</h2>
+          <ul class="formula-list">
+            <li>
+              <span class="formula-title">Magnetic Flux</span>
+              <code>Φ = B·A·cosθ</code> (webers).
+            </li>
+            <li>
+              <span class="formula-title">Faraday's Law</span>
+              <code>ε = –N ΔΦ / Δt</code> (induced EMF).
+            </li>
+            <li>
+              <span class="formula-title">Lenz's Law</span>
+              The induced current opposes the change in flux (explains the minus
+              sign).
+            </li>
+            <li>
+              <span class="formula-title">Transformer Equation</span>
+              <code>Vₛ / Vₚ = Nₛ / Nₚ</code> (voltage ratio = turns ratio).
+            </li>
+            <li>
+              <span class="formula-title">Self‑Inductance</span>
+              <code>ε = –L dI/dt</code> (L = inductance in henrys).
+            </li>
+          </ul>
+        </section>
+
+        <!-- Week 7: Review (condensed) -->
+        <section class="module">
+          <h2>Week 7: Key Problem‑Solving Tips</h2>
+          <ul class="formula-list">
+            <li>
+              <span class="formula-title">Coulomb / Field</span>
+              Use vector addition for multiple charges; remember field
+              direction.
+            </li>
+            <li>
+              <span class="formula-title">DC Circuits</span>
+              Combine resistors step‑by‑step; apply Ohm’s law and Kirchhoff for
+              multi‑loop.
+            </li>
+            <li>
+              <span class="formula-title">Induction</span>
+              Sign of EMF from Lenz’s law; flux change can be due to changing B,
+              area, or angle.
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
