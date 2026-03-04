@@ -57,6 +57,7 @@
         font-size: 1rem;
         color: #495057;
         margin-top: 1rem;
+        margin-bottom: 1.5rem;
       }
 
       .owner-link {
@@ -67,6 +68,51 @@
 
       .owner-link:hover {
         text-decoration: underline;
+      }
+
+      /* Compact call-to-action card */
+      .practice-cta {
+        background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 50px;
+        margin: 1rem auto 1.5rem;
+        max-width: 500px;
+        box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .practice-cta p {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background-color: white;
+        color: #0d6efd;
+        padding: 0.4rem 1.2rem;
+        border-radius: 40px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: all 0.2s;
+        border: 2px solid white;
+        white-space: nowrap;
+      }
+
+      .cta-button:hover {
+        background-color: transparent;
+        color: white;
+        border-color: white;
       }
 
       #course-materials h2 {
@@ -167,6 +213,11 @@
         .resource-grid {
           grid-template-columns: 1fr;
         }
+        .practice-cta {
+          flex-direction: column;
+          text-align: center;
+          border-radius: 30px;
+        }
       }
     </style>
   </head>
@@ -175,18 +226,29 @@
       <header>
         <h1>Computer Science (second-semester)</h1>
         <p class="subtitle">
-          A curated collection of study materials and outlines for first-year
-          students at KWASU.
+          Essential study guides and outlines for KWASU freshmen..
         </p>
         <p class="creator-credit">
-          main pdf compiled by
+          Main pdf compiled by
           <a
-            href="https://api.whatsapp.com/send?phone=2349130699671&text=Hello%20Scholar%20Oromi%2C%20from%20%22100LevelSecondSem.vercel.app%22%2C%20thanks%20for%20the%20compilation%2E"
+            href="https://api.whatsapp.com/send?phone=2349130699671&text=hello%20mr%20oromi%2C%20from%20%22kwasucsnotes%22%2C%20thanks%20for%20the%20compilation%2E"
             target="_blank"
             class="owner-link"
             >Scholar Oromi</a
           >
         </p>
+
+        <!-- Compact practice exam call-to-action -->
+        <div class="practice-cta">
+          <p>practice exam ready quesions?</p>
+          <a
+            href="https://qwikiz.vercel.app/"
+            target="_blank"
+            class="cta-button"
+          >
+            Try Qwikiz →
+          </a>
+        </div>
       </header>
 
       <section id="course-materials">
@@ -235,7 +297,7 @@
               Mathematical foundations, limits, differentiation, integration,
               sequences, vectors, matrices, and differential equations.
             </p>
-            <a href="/MTH102/mathlanding.html" class="resource-link"
+            <a href="/MTH101/mathlanding.html" class="resource-link"
               >View Resources</a
             >
           </div>
@@ -298,7 +360,7 @@
     <footer>
       <p>
         <small
-          >made with some "tism-maybe" by
+          >made with "some tism maybe" & copilot with deepseek by
           <a href="https://github.com/HassanAmirii" target="_blank"
             >Hassan2Bit</a
           ></small
