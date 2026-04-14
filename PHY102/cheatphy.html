@@ -135,153 +135,264 @@
       </header>
 
       <main>
-        <!-- Week 1: Electric Charge and Field -->
         <section class="module">
-          <h2>Week 1: Electric Charge and Field</h2>
+          <h2>Week 1: Introduction</h2>
+          <ul class="formula-list">
+            <li>
+              <span class="formula-title">Unit Conversions and Constants</span>
+              <code>1 uC = 10^-6 C</code>, <code>1 mA = 10^-3 A</code>,
+              <code>k = 1/(4 pi e0) = 8.99 x 10^9 N m^2 C^-2</code>.
+            </li>
+            <li>
+              <span class="formula-title">General Strategy</span>
+              Start from known variables, write governing law, substitute SI
+              units, then solve.
+            </li>
+          </ul>
+        </section>
+
+        <section class="module">
+          <h2>Week 2: Forces in Nature and Electrostatics</h2>
           <ul class="formula-list">
             <li>
               <span class="formula-title">Coulomb's Law</span>
-              <code>F = k·q₁q₂ / r²</code> where
-              <code>k = 8.99×10⁹ N·m²/C²</code><br />
-              Force is attractive for opposite charges, repulsive for like
-              charges.
+              <code>F = k |q1 q2| / r^2</code>.
             </li>
             <li>
-              <span class="formula-title">Electric Field</span>
-              <code>E = F / q</code> (N/C). For a point charge:
-              <code>E = k·q / r²</code> (direction away from +q).
+              <span class="formula-title">Vector Form</span>
+              <code>F12 = k q1 q2 r_hat / r^2</code>.
             </li>
             <li>
-              <span class="formula-title"
-                >Electric Potential Difference (Voltage)</span
-              >
-              <code>V = W / q</code> (work per unit charge). For a point charge:
-              <code>V = k·q / r</code>.
+              <span class="formula-title">Superposition Principle</span>
+              <code>F_net = F1 + F2 + ... + Fn</code> (vector sum).
             </li>
           </ul>
         </section>
 
-        <!-- Week 2 & 3: DC Principles -->
         <section class="module">
-          <h2>Weeks 2–3: DC Principles</h2>
+          <h2>Week 3: Electric Field and Potential</h2>
           <ul class="formula-list">
             <li>
-              <span class="formula-title">Electric Current</span>
-              <code>I = ΔQ / Δt</code> (amperes).
+              <span class="formula-title">Electric Field</span>
+              <code>E = F/q</code>, for point charge <code>E = kq/r^2</code>.
+            </li>
+            <li>
+              <span class="formula-title">Electric Potential</span>
+              <code>V = W/q</code>, for point charge <code>V = kq/r</code>.
+            </li>
+            <li>
+              <span class="formula-title">Potential Difference and Field</span>
+              <code>E = Delta V / d</code> (uniform field).
+            </li>
+            <li>
+              <span class="formula-title">Gauss's Law</span>
+              <code>Psi_E = integral E . dA = Q_enclosed / e0</code>.
+            </li>
+          </ul>
+        </section>
+
+        <section class="module">
+          <h2>Week 4: Capacitance and Electric Dipoles</h2>
+          <ul class="formula-list">
+            <li>
+              <span class="formula-title">Capacitance</span>
+              <code>C = Q/V</code>, parallel plate <code>C = e0 A/d</code>.
+            </li>
+            <li>
+              <span class="formula-title">Energy Stored in Capacitor</span>
+              <code>U = 1/2 C V^2 = 1/2 QV = Q^2/(2C)</code>.
+            </li>
+            <li>
+              <span class="formula-title">Electric Dipole Moment</span>
+              <code>p = qd</code>.
+            </li>
+            <li>
+              <span class="formula-title">Torque on Dipole</span>
+              <code>tau = pE sin(theta)</code>.
+            </li>
+            <li>
+              <span class="formula-title">Electric Field Energy Density</span>
+              <code>u = 1/2 e0 E^2</code>.
+            </li>
+          </ul>
+        </section>
+
+        <section class="module">
+          <h2>Week 5: DC Circuits</h2>
+          <ul class="formula-list">
+            <li>
+              <span class="formula-title">Current</span>
+              <code>I = Delta Q / Delta t</code>.
             </li>
             <li>
               <span class="formula-title">Ohm's Law</span>
-              <code>V = I R</code>
+              <code>V = IR</code>.
             </li>
             <li>
-              <span class="formula-title">Resistance & Resistivity</span>
-              <code>R = ρ L / A</code> (ρ = resistivity, L = length, A =
-              cross‑sectional area).
+              <span class="formula-title">Resistance of Conductor</span>
+              <code>R = rho L/A</code>.
             </li>
             <li>
-              <span class="formula-title">Temperature Dependence</span>
-              <code>R(T) = R₀ [1 + α (T – T₀)]</code> (α = temperature
-              coefficient).
+              <span class="formula-title">Resistors in Series</span>
+              <code>R_eq = R1 + R2 + ...</code>.
+            </li>
+            <li>
+              <span class="formula-title">Resistors in Parallel</span>
+              <code>1/R_eq = 1/R1 + 1/R2 + ...</code>.
             </li>
             <li>
               <span class="formula-title">Electric Power</span>
-              <code>P = I V = I² R = V² / R</code> (watts).
-            </li>
-            <li>
-              <span class="formula-title">Electrical Energy</span>
-              <code>E = P · t</code> (joules or kWh).
+              <code>P = IV = I^2R = V^2/R</code>.
             </li>
           </ul>
         </section>
 
-        <!-- Week 4: DC Circuit Analysis I -->
         <section class="module">
-          <h2>Week 4: Resistor Networks</h2>
+          <h2>Week 6: Magnetic Fields</h2>
           <ul class="formula-list">
             <li>
-              <span class="formula-title">Series Resistance</span>
-              <code>Rₜ = R₁ + R₂ + R₃ + …</code> (same current through all).
+              <span class="formula-title">Magnetic Force on Charge</span>
+              <code>F = qvB sin(theta)</code>.
             </li>
             <li>
-              <span class="formula-title">Parallel Resistance</span>
-              <code>1/Rₜ = 1/R₁ + 1/R₂ + 1/R₃ + …</code> (same voltage across
-              all).
+              <span class="formula-title">Lorentz Force</span>
+              <code>F = q(E + v x B)</code>.
             </li>
             <li>
-              <span class="formula-title"
-                >Special case (two resistors in parallel)</span
-              >
-              <code>Rₜ = (R₁ R₂) / (R₁ + R₂)</code>
+              <span class="formula-title">Force on Current-Carrying Wire</span>
+              <code>F = BIL sin(theta)</code>.
+            </li>
+            <li>
+              <span class="formula-title">Biot-Savart Law</span>
+              <code>dB = (mu0/4pi) (I dl x r_hat)/r^2</code>.
+            </li>
+            <li>
+              <span class="formula-title">Ampere's Law</span>
+              <code>integral B . dl = mu0 I_enclosed</code>.
+            </li>
+            <li>
+              <span class="formula-title">Magnetic Energy Density</span>
+              <code>u_B = B^2/(2mu0)</code>.
             </li>
           </ul>
         </section>
 
-        <!-- Week 5: DC Circuit Analysis II -->
         <section class="module">
-          <h2>Week 5: EMF, Internal Resistance, Kirchhoff</h2>
+          <h2>Week 7: EMF and Electromagnetic Induction</h2>
           <ul class="formula-list">
-            <li>
-              <span class="formula-title">Terminal Voltage</span>
-              <code>V = EMF – I r</code> (r = internal resistance).
-            </li>
-            <li>
-              <span class="formula-title">Kirchhoff's Junction Rule</span>
-              Sum of currents entering a junction = sum of currents leaving.
-            </li>
-            <li>
-              <span class="formula-title">Kirchhoff's Loop Rule</span>
-              Sum of potential differences around any closed loop = 0.
-            </li>
-          </ul>
-        </section>
-
-        <!-- Week 6: Electromagnetic Induction -->
-        <section class="module">
-          <h2>Week 6: Electromagnetic Induction</h2>
-          <ul class="formula-list">
-            <li>
-              <span class="formula-title">Magnetic Flux</span>
-              <code>Φ = B·A·cosθ</code> (webers).
-            </li>
             <li>
               <span class="formula-title">Faraday's Law</span>
-              <code>ε = –N ΔΦ / Δt</code> (induced EMF).
+              <code>emf = -N Delta Phi_B / Delta t</code>.
             </li>
             <li>
-              <span class="formula-title">Lenz's Law</span>
-              The induced current opposes the change in flux (explains the minus
-              sign).
+              <span class="formula-title">Magnetic Flux</span>
+              <code>Phi_B = BA cos(theta)</code>.
             </li>
             <li>
-              <span class="formula-title">Transformer Equation</span>
-              <code>Vₛ / Vₚ = Nₛ / Nₚ</code> (voltage ratio = turns ratio).
+              <span class="formula-title">Self-Inductance</span>
+              <code>emf_L = -L dI/dt</code>.
             </li>
             <li>
-              <span class="formula-title">Self‑Inductance</span>
-              <code>ε = –L dI/dt</code> (L = inductance in henrys).
+              <span class="formula-title">Energy in Inductor</span>
+              <code>U = 1/2 L I^2</code>.
+            </li>
+            <li>
+              <span class="formula-title">Transformer Ratio</span>
+              <code>Vs/Vp = Ns/Np</code> and <code>Ip/Is = Ns/Np</code> (ideal).
             </li>
           </ul>
         </section>
 
-        <!-- Week 7: Review (condensed) -->
         <section class="module">
-          <h2>Week 7: Key Problem‑Solving Tips</h2>
+          <h2>Week 8: Maxwell's Equations</h2>
           <ul class="formula-list">
             <li>
-              <span class="formula-title">Coulomb / Field</span>
-              Use vector addition for multiple charges; remember field
-              direction.
+              <span class="formula-title">Gauss for Electricity</span>
+              <code>integral E . dA = Q_enclosed/e0</code>.
             </li>
             <li>
-              <span class="formula-title">DC Circuits</span>
-              Combine resistors step‑by‑step; apply Ohm’s law and Kirchhoff for
-              multi‑loop.
+              <span class="formula-title">Gauss for Magnetism</span>
+              <code>integral B . dA = 0</code>.
             </li>
             <li>
-              <span class="formula-title">Induction</span>
-              Sign of EMF from Lenz’s law; flux change can be due to changing B,
-              area, or angle.
+              <span class="formula-title">Faraday-Maxwell Law</span>
+              <code>integral E . dl = - dPhi_B/dt</code>.
             </li>
+            <li>
+              <span class="formula-title">Ampere-Maxwell Law</span>
+              <code>integral B . dl = mu0 I_enclosed + mu0 e0 dPhi_E/dt</code>.
+            </li>
+          </ul>
+        </section>
+
+        <section class="module">
+          <h2>Week 9: Electromagnetic Oscillations and Waves</h2>
+          <ul class="formula-list">
+            <li>
+              <span class="formula-title">Wave Speed</span>
+              <code>c = 1/sqrt(mu0 e0)</code>.
+            </li>
+            <li>
+              <span class="formula-title">Wave Relation</span>
+              <code>c = f lambda</code>.
+            </li>
+            <li>
+              <span class="formula-title">Field Ratio in EM Wave</span>
+              <code>E0 = cB0</code>.
+            </li>
+            <li>
+              <span class="formula-title">LC Oscillator Frequency</span>
+              <code>omega = 1/sqrt(LC)</code>,
+              <code>f = 1/(2pi sqrt(LC))</code>.
+            </li>
+          </ul>
+        </section>
+
+        <section class="module">
+          <h2>Week 10: AC Voltages and Currents</h2>
+          <ul class="formula-list">
+            <li>
+              <span class="formula-title">RMS Values</span>
+              <code>V_rms = V0/sqrt(2)</code>, <code>I_rms = I0/sqrt(2)</code>.
+            </li>
+            <li>
+              <span class="formula-title">Reactances</span>
+              <code>X_L = omega L</code>, <code>X_C = 1/(omega C)</code>.
+            </li>
+            <li>
+              <span class="formula-title">Impedance (Series RLC)</span>
+              <code>Z = sqrt(R^2 + (X_L - X_C)^2)</code>.
+            </li>
+            <li>
+              <span class="formula-title">AC Ohm's Law</span>
+              <code>I_rms = V_rms/Z</code>.
+            </li>
+            <li>
+              <span class="formula-title">Average Power</span>
+              <code>P_avg = V_rms I_rms cos(phi)</code>,
+              <code>cos(phi) = R/Z</code>.
+            </li>
+          </ul>
+        </section>
+
+        <section class="module">
+          <h2>Week 11: Revision</h2>
+          <ul class="formula-list">
+            <li>General revision of all key topics.</li>
+          </ul>
+        </section>
+
+        <section class="module">
+          <h2>Week 12: CA CBT Test</h2>
+          <ul class="formula-list">
+            <li>Continuous assessment computer-based test.</li>
+          </ul>
+        </section>
+
+        <section class="module">
+          <h2>Week 13: Exams CBT</h2>
+          <ul class="formula-list">
+            <li>Final examination computer-based test.</li>
           </ul>
         </section>
       </main>
