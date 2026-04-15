@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MTH102: Complete Cheat Sheet</title>
     <style>
-      /* clean style – matching the original cheat sheet templates */
       :root {
         --primary-color: #0d6efd;
         --secondary-color: #6c757d;
@@ -48,6 +47,7 @@
         text-decoration: none;
         font-size: 1.1em;
       }
+
       .breadcrumb a:hover {
         text-decoration: underline;
       }
@@ -100,12 +100,11 @@
       }
 
       .formula-list li::before {
-        content: "•";
+        content: "*";
         position: absolute;
         left: 0;
         color: var(--primary-color);
         font-weight: bold;
-        font-size: 1.2em;
       }
 
       .formula-title {
@@ -122,8 +121,14 @@
         font-size: 0.95em;
       }
 
-      .math {
-        font-style: italic;
+      @media (max-width: 600px) {
+        .container {
+          padding: 1.2em;
+        }
+
+        header h1 {
+          font-size: 2.2em;
+        }
       }
     </style>
   </head>
@@ -135,154 +140,200 @@
 
       <header>
         <h1>MTH102: Complete Cheat Sheet</h1>
-        <p>
-          calculus · algebra · vectors · complex numbers · differential
-          equations
-        </p>
+        <p>week-by-week formulas for calculus topics</p>
       </header>
 
       <main>
-        <!-- Module 1: Mathematical Foundations -->
         <section class="module">
-          <h2>1. Mathematical Foundations</h2>
+          <h2>Week 1: Function of a Real Variable</h2>
           <ul class="formula-list">
             <li>
-              <span class="formula-title">Number Systems</span>
-              Natural (ℕ), Integers (ℤ), Rational (ℚ), Irrational, Real (ℝ).<br />
-              Binary, octal, hexadecimal bases.
+              <span class="formula-title">Function Notation</span>
+              <code>y = f(x)</code>, domain <code>D_f</code>, range
+              <code>R_f</code>.
             </li>
             <li>
-              <span class="formula-title">Set Operations</span>
-              Union (∪), Intersection (∩), Complement (A'), Symmetric difference
-              (A ∆ B).<br />
-              Venn diagrams for visual representation.
+              <span class="formula-title">Composition and Inverse</span>
+              <code>(f o g)(x) = f(g(x))</code>, <code>f^(-1)(f(x)) = x</code>.
             </li>
             <li>
-              <span class="formula-title">Indices & Logarithms</span>
-              <code>a<sup>m</sup> · a<sup>n</sup> = a<sup>m+n</sup></code
-              >, <code>(a<sup>m</sup>)<sup>n</sup> = a<sup>mn</sup></code
-              ><br />
-              <code
-                >log<sub>a</sub>(xy) = log<sub>a</sub>x + log<sub>a</sub>y</code
-              >,
-              <code
-                >log<sub>a</sub>(x/y) = log<sub>a</sub>x -
-                log<sub>a</sub>y</code
-              ><br />
-              <code>log<sub>a</sub>x<sup>n</sup> = n log<sub>a</sub>x</code>
-            </li>
-            <li>
-              <span class="formula-title">Quadratic Equation</span>
-              <code>ax² + bx + c = 0</code><br />
-              Roots: <code>x = [-b ± √(b² - 4ac)] / 2a</code><br />
-              Discriminant: <code>Δ = b² - 4ac</code><br />
-              Sum of roots = <code>-b/a</code>, Product = <code>c/a</code>
-            </li>
-            <li>
-              <span class="formula-title">Functions</span>
-              Domain, range, independent/dependent variables.<br />
-              Inverse: <code>f⁻¹(f(x)) = x</code>, composition:
-              <code>(f ∘ g)(x) = f(g(x))</code>
-            </li>
-            <li>
-              <span class="formula-title">Inequalities & Absolute Value</span>
-              <code>|x| = { x if x ≥ 0, -x if x < 0 }</code><br />
-              <code>|x - a| < b &nbsp;⇒&nbsp; a - b < x < a + b</code>
+              <span class="formula-title">Common Function Forms</span>
+              <code>f(x) = ax + b</code>, <code>f(x) = ax^2 + bx + c</code>,
+              <code>f(x) = 1/x</code>, <code>f(x) = |x|</code>.
             </li>
           </ul>
         </section>
 
-        <!-- Module 2: Core Calculus -->
         <section class="module">
-          <h2>2. Core Calculus</h2>
+          <h2>Week 2: Graphs of Functions</h2>
           <ul class="formula-list">
             <li>
-              <span class="formula-title">Limits</span>
-              <code>lim<sub>x→c</sub> f(x) = L</code> (approaches L)<br />
-              Standard limits: <code>lim<sub>x→0</sub> sin x / x = 1</code>,
-              <code>lim<sub>x→0</sub> (eˣ - 1)/x = 1</code>
+              <span class="formula-title">Quadratic Vertex</span>
+              For <code>y = ax^2 + bx + c</code>, vertex at
+              <code>x = -b/(2a)</code>.
             </li>
             <li>
-              <span class="formula-title">Differentiation</span>
-              <code>dy/dx</code> = gradient of tangent.<br />
-              <strong>Product rule:</strong> <code>(uv)' = u'v + uv'</code
-              ><br />
-              <strong>Quotient rule:</strong>
-              <code>(u/v)' = (u'v - uv') / v²</code><br />
-              <strong>Chain rule:</strong> <code>dy/dx = dy/du · du/dx</code
-              ><br />
-              Standard derivatives:<br />
-              <code>d/dx (xⁿ) = n xⁿ⁻¹</code><br />
-              <code>d/dx (sin x) = cos x</code><br />
-              <code>d/dx (cos x) = -sin x</code><br />
-              <code>d/dx (ln x) = 1/x</code><br />
-              <code>d/dx (eˣ) = eˣ</code>
+              <span class="formula-title">Intercepts</span>
+              y-intercept: set <code>x = 0</code>; x-intercepts: solve
+              <code>f(x) = 0</code>.
             </li>
             <li>
-              <span class="formula-title">Applications</span>
-              Tangent: <code>y - y₀ = m (x - x₀)</code><br />
-              Stationary points: solve <code>dy/dx = 0</code>.<br />
-              Second derivative test: <code>d²y/dx² > 0 → min</code>,
-              <code>< 0 → max</code>, <code>= 0 → possible inflection</code>.
-            </li>
-            <li>
-              <span class="formula-title">Integration</span>
-              Indefinite: <code>∫ xⁿ dx = xⁿ⁺¹/(n+1) + C</code> (n ≠ -1)<br />
-              <code>∫ 1/x dx = ln|x| + C</code><br />
-              <code>∫ sin x dx = -cos x + C</code><br />
-              <code>∫ cos x dx = sin x + C</code><br />
-              <code>∫ eˣ dx = eˣ + C</code><br />
-              <code>∫ (ax + b)ⁿ dx = (ax + b)ⁿ⁺¹ / [a(n+1)] + C</code>
+              <span class="formula-title">Graph Transformations</span>
+              <code>y = f(x - h) + k</code>, <code>y = a f(x)</code>,
+              <code>y = f(bx)</code>.
             </li>
           </ul>
         </section>
 
-        <!-- Module 3: Advanced Topics -->
         <section class="module">
-          <h2>3. Advanced Topics</h2>
+          <h2>Week 3: Limits of Functions</h2>
           <ul class="formula-list">
             <li>
-              <span class="formula-title">Sequences & Series</span>
-              <strong>A.P.:</strong> <code>aₙ = a + (n-1)d</code>,
-              <code>Sₙ = n/2 [2a + (n-1)d]</code><br />
-              <strong>G.P.:</strong> <code>aₙ = a rⁿ⁻¹</code>,
-              <code>Sₙ = a(1 - rⁿ)/(1 - r)</code> (r≠1)<br />
-              Sum to infinity (|r|<1): <code>S∞ = a/(1 - r)</code><br />
-              <strong>Maclaurin series:</strong>
-              <code>f(x) = f(0) + f'(0)x + f''(0)x²/2! + ...</code>
+              <span class="formula-title">Limit Definition</span>
+              <code>lim(x->c) f(x) = L</code>.
             </li>
             <li>
-              <span class="formula-title">Vectors & Matrices</span>
-              Dot product: <code>a·b = |a||b|cos θ</code><br />
-              Cross product: <code>|a × b| = |a||b| sin θ</code><br />
-              2×2 determinant: <code>|a b; c d| = ad - bc</code><br />
-              Matrix inverse (2×2): <code>A⁻¹ = 1/(ad - bc) [d -b; -c a]</code>
+              <span class="formula-title">Standard Limits</span>
+              <code>lim(x->0) sin x / x = 1</code>,
+              <code>lim(x->0) (1 - cos x)/x^2 = 1/2</code>.
             </li>
             <li>
-              <span class="formula-title">Complex Numbers</span>
-              <code>j² = -1</code>, <code>j³ = -j</code>, <code>j⁴ = 1</code
-              ><br />
-              Polar form: <code>z = r(cos θ + j sin θ)</code><br />
-              De Moivre: <code>(cos θ + j sin θ)ⁿ = cos nθ + j sin nθ</code>
+              <span class="formula-title">Algebra of Limits</span>
+              <code>lim(f + g) = lim f + lim g</code>,
+              <code>lim(fg) = (lim f)(lim g)</code>,
+              <code>lim(f/g) = (lim f)/(lim g)</code>.
+            </li>
+          </ul>
+        </section>
+
+        <section class="module">
+          <h2>Week 4: Continuity of Functions</h2>
+          <ul class="formula-list">
+            <li>
+              <span class="formula-title">Continuity at x = c</span>
+              <code>f(c)</code> exists, <code>lim(x->c) f(x)</code> exists, and
+              <code>lim(x->c) f(x) = f(c)</code>.
             </li>
             <li>
-              <span class="formula-title">Differential Equations</span>
-              <strong>1st order separable:</strong>
-              <code>dy/dx = g(x)h(y) → ∫ dy/h(y) = ∫ g(x) dx</code><br />
-              <strong>Linear 1st order:</strong>
-              <code>dy/dx + P(x)y = Q(x)</code>, integrating factor
-              <code>μ = e<sup>∫ P dx</sup></code
-              ><br />
-              <strong>2nd order homogeneous:</strong>
-              <code>ay'' + by' + cy = 0</code> – solve characteristic eqn.
+              <span class="formula-title">Continuity on Interval</span>
+              Continuous on <code>[a,b]</code> if continuous at each point in
+              the interval.
+            </li>
+          </ul>
+        </section>
+
+        <section class="module">
+          <h2>Week 5: The Derivative as a Limit</h2>
+          <ul class="formula-list">
+            <li>
+              <span class="formula-title">First Principles</span>
+              <code>f'(x) = lim(h->0) [f(x+h) - f(x)] / h</code>.
             </li>
             <li>
-              <span class="formula-title">Probability & Statistics</span>
-              Mean <code>μ = Σx/n</code>, variance <code>σ² = Σ(x-μ)² / n</code
-              ><br />
-              Binomial: <code>P(X=k) = C(n,k) pᵏ (1-p)ⁿ⁻ᵏ</code><br />
-              Poisson: <code>P(X=k) = e⁻ˡ lᵏ/k!</code><br />
-              Normal: bell curve, parameters μ, σ.
+              <span class="formula-title">Tangent Line</span>
+              At <code>(x0, y0)</code>, slope <code>m = f'(x0)</code>, tangent:
+              <code>y - y0 = m(x - x0)</code>.
+            </li>
+          </ul>
+        </section>
+
+        <section class="module">
+          <h2>Week 6: Techniques of Differentiation I</h2>
+          <ul class="formula-list">
+            <li>
+              <span class="formula-title">Basic Rules</span>
+              <code>d/dx(c) = 0</code>, <code>d/dx(x^n) = n x^(n-1)</code>,
+              <code>d/dx[cf(x)] = c f'(x)</code>.
+            </li>
+            <li>
+              <span class="formula-title">Linearity</span>
+              <code>d/dx[u +/- v] = u' +/- v'</code>.
+            </li>
+            <li>
+              <span class="formula-title">Common Derivatives</span>
+              <code>d/dx(sin x)=cos x</code>, <code>d/dx(cos x)=-sin x</code>,
+              <code>d/dx(e^x)=e^x</code>, <code>d/dx(ln x)=1/x</code>.
+            </li>
+          </ul>
+        </section>
+
+        <section class="module">
+          <h2>Week 7: Techniques of Differentiation II</h2>
+          <ul class="formula-list">
+            <li>
+              <span class="formula-title">Product Rule</span>
+              <code>(uv)' = u'v + uv'</code>.
+            </li>
+            <li>
+              <span class="formula-title">Quotient Rule</span>
+              <code>(u/v)' = (u'v - uv')/v^2</code>.
+            </li>
+            <li>
+              <span class="formula-title">Chain Rule</span>
+              <code>d/dx[f(g(x))] = f'(g(x))g'(x)</code>.
+            </li>
+            <li>
+              <span class="formula-title">Implicit Differentiation</span>
+              Differentiate both sides with respect to <code>x</code> and solve
+              for <code>dy/dx</code>.
+            </li>
+          </ul>
+        </section>
+
+        <section class="module">
+          <h2>Week 8: Integration as the Inverse of Differentiation</h2>
+          <ul class="formula-list">
+            <li>
+              <span class="formula-title">Antiderivative</span>
+              If <code>dF/dx = f(x)</code>, then
+              <code>integral f(x) dx = F(x) + C</code>.
+            </li>
+            <li>
+              <span class="formula-title">Power Rule</span>
+              <code>integral x^n dx = x^(n+1)/(n+1) + C</code>,
+              <code>n != -1</code>.
+            </li>
+            <li>
+              <span class="formula-title">Basic Integrals</span>
+              <code>integral 1/x dx = ln|x| + C</code>,
+              <code>integral e^x dx = e^x + C</code>.
+            </li>
+          </ul>
+        </section>
+
+        <section class="module">
+          <h2>Week 9: Techniques of Integration</h2>
+          <ul class="formula-list">
+            <li>
+              <span class="formula-title">Substitution</span>
+              <code>u=g(x)</code> gives
+              <code>integral f(g(x))g'(x) dx = integral f(u) du</code>.
+            </li>
+            <li>
+              <span class="formula-title">Integration by Parts</span>
+              <code>integral u dv = uv - integral v du</code>.
+            </li>
+            <li>
+              <span class="formula-title">Partial Fractions</span>
+              For rational functions, decompose first, then integrate each term.
+            </li>
+          </ul>
+        </section>
+
+        <section class="module">
+          <h2>Week 10: Definite Integrals and Applications</h2>
+          <ul class="formula-list">
+            <li>
+              <span class="formula-title">Fundamental Theorem</span>
+              <code>integral_a^b f(x) dx = F(b) - F(a)</code>.
+            </li>
+            <li>
+              <span class="formula-title">Area Under Curve</span>
+              <code>A = integral_a^b f(x) dx</code> for <code>f(x) >= 0</code>.
+            </li>
+            <li>
+              <span class="formula-title">Area Between Curves</span>
+              <code>A = integral_a^b [f(x) - g(x)] dx</code> (top minus bottom).
             </li>
           </ul>
         </section>
